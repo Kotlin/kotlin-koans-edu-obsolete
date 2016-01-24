@@ -1,0 +1,1 @@
+fun Shop.getSetOfCustomers(): Set<Customer> = <taskWindow>customers.toSet()</taskWindow>
