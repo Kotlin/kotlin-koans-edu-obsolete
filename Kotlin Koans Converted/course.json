@@ -1,0 +1,851 @@
+{
+  "lessons" : [ {
+    "title" : "Introduction",
+    "task_list" : [ {
+      "name" : "Hello, world!",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 2,
+            "start" : 22,
+            "length" : 6,
+            "hint" : "",
+            "possible_answer" : "\"OK\""
+          } ],
+          "name" : "Task.kt"
+        }
+      }
+    }, {
+      "name" : "Java to Kotlin conversion",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 2,
+            "start" : 0,
+            "length" : 56,
+            "hint" : "",
+            "possible_answer" : "fun toJSON(collection: Collection<Int>): String {\n    val sb = StringBuilder()\n    sb.append(\"[\")\n    val iterator = collection.iterator()\n    while (iterator.hasNext())\n    {\n        val element = iterator.next()\n        sb.append(element)\n        if (iterator.hasNext())\n        {\n            sb.append(\", \")\n        }\n    }\n    sb.append(\"]\")\n    return sb.toString()\n}"
+          } ],
+          "name" : "Task.kt"
+        },
+        "JavaCode.java" : {
+          "placeholders" : [ ],
+          "name" : "JavaCode.java"
+        }
+      }
+    }, {
+      "name" : "Named arguments",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 2,
+            "start" : 68,
+            "length" : 6,
+            "hint" : "",
+            "possible_answer" : "prefix = \"[\", postfix = \"]\""
+          } ],
+          "name" : "Task.kt"
+        }
+      }
+    }, {
+      "name" : "Default arguments",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 2,
+            "start" : 0,
+            "length" : 56,
+            "hint" : "",
+            "possible_answer" : "fun foo(name: String, number: Int = 42, toUpperCase: Boolean = false)"
+          } ],
+          "name" : "Task.kt"
+        }
+      }
+    }, {
+      "name" : "Lambdas",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 2,
+            "start" : 74,
+            "length" : 6,
+            "hint" : "",
+            "possible_answer" : "it % 2 == 0"
+          } ],
+          "name" : "Task.kt"
+        }
+      }
+    }, {
+      "name" : "Strings",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 4,
+            "start" : 27,
+            "length" : 6,
+            "hint" : "",
+            "possible_answer" : "\"\"\"\\d{2} ${month} \\d{4}\"\"\""
+          } ],
+          "name" : "Task.kt"
+        }
+      }
+    }, {
+      "name" : "Data classes",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 2,
+            "start" : 0,
+            "length" : 12,
+            "hint" : "",
+            "possible_answer" : "data class Person(val name: String, val age: Int)"
+          } ],
+          "name" : "Task.kt"
+        }
+      }
+    }, {
+      "name" : "Nullable types",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 5,
+            "start" : 4,
+            "length" : 6,
+            "hint" : "",
+            "possible_answer" : "val email = client?.personalInfo?.email\n    if (email != null && message != null) {\n        mailer.sendMessage(email, message)\n    }"
+          } ],
+          "name" : "Task.kt"
+        }
+      }
+    }, {
+      "name" : "Smart casts",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 4,
+            "start" : 22,
+            "length" : 6,
+            "hint" : "",
+            "possible_answer" : "expr.value"
+          }, {
+            "line" : 5,
+            "start" : 22,
+            "length" : 6,
+            "hint" : "",
+            "possible_answer" : "eval(expr.left) + eval(expr.right)"
+          } ],
+          "name" : "Task.kt"
+        }
+      }
+    }, {
+      "name" : "Extension functions",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 2,
+            "start" : 30,
+            "length" : 6,
+            "hint" : "",
+            "possible_answer" : "RationalNumber(this, 1)"
+          }, {
+            "line" : 3,
+            "start" : 41,
+            "length" : 6,
+            "hint" : "",
+            "possible_answer" : "RationalNumber(first, second)"
+          } ],
+          "name" : "Task.kt"
+        }
+      }
+    }, {
+      "name" : "Object expressions",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 6,
+            "start" : 32,
+            "length" : 9,
+            "hint" : "",
+            "possible_answer" : "object : Comparator<Int> {\n    override fun compare(x: Int, y: Int) = y - x\n}"
+          } ],
+          "name" : "Task.kt"
+        }
+      }
+    }, {
+      "name" : "SAM conversions",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 6,
+            "start" : 42,
+            "length" : 6,
+            "hint" : "",
+            "possible_answer" : "y - x"
+          } ],
+          "name" : "Task.kt"
+        }
+      }
+    }, {
+      "name" : "Extensions on collections",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 3,
+            "start" : 32,
+            "length" : 50,
+            "hint" : "",
+            "possible_answer" : "sortedDescending()"
+          } ],
+          "name" : "Task.kt"
+        }
+      }
+    } ]
+  }, {
+    "title" : "Conventions",
+    "task_list" : [ {
+      "name" : "Comparison",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 3,
+            "start" : 4,
+            "length" : 2,
+            "hint" : "",
+            "possible_answer" : "override fun compareTo(other: MyDate) = when {\n        year != other.year -> year - other.year\n        month != other.month -> month - other.month\n        else -> dayOfMonth - other.dayOfMonth\n    }"
+          } ],
+          "name" : "Task.kt"
+        }
+      }
+    }, {
+      "name" : "In range",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 2,
+            "start" : 60,
+            "length" : 1,
+            "hint" : "",
+            "possible_answer" : " {\n    operator fun contains(item: MyDate): Boolean = start <= item && item <= endInclusive\n}"
+          } ],
+          "name" : "Task.kt"
+        },
+        "MyDate.kt" : {
+          "placeholders" : [ ],
+          "name" : "MyDate.kt"
+        }
+      }
+    }, {
+      "name" : "Range to",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 2,
+            "start" : 45,
+            "length" : 6,
+            "hint" : "",
+            "possible_answer" : "DateRange(this, other)"
+          } ],
+          "name" : "Task.kt"
+        },
+        "MyDate.kt" : {
+          "placeholders" : [ ],
+          "name" : "MyDate.kt"
+        }
+      }
+    }, {
+      "name" : "For loop",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 2,
+            "start" : 0,
+            "length" : 51,
+            "hint" : "",
+            "possible_answer" : "class DateRange(val start: MyDate, val end: MyDate): Iterable<MyDate>{\n    override fun iterator(): Iterator<MyDate> = DateIterator(this)\n}\n\nclass DateIterator(val dateRange:DateRange) : Iterator<MyDate> {\n    var current: MyDate = dateRange.start\n    override fun next(): MyDate {\n        val result = current\n        current = current.nextDay()\n        return result\n    }\n    override fun hasNext(): Boolean = current <= dateRange.end\n}"
+          } ],
+          "name" : "Task.kt"
+        },
+        "DateUtil.kt" : {
+          "placeholders" : [ ],
+          "name" : "DateUtil.kt"
+        },
+        "MyDate.kt" : {
+          "placeholders" : [ ],
+          "name" : "MyDate.kt"
+        }
+      }
+    }, {
+      "name" : "Operators overloading",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 8,
+            "start" : 0,
+            "length" : 69,
+            "hint" : "",
+            "possible_answer" : "\noperator fun MyDate.plus(timeInterval: TimeInterval) = addTimeIntervals(timeInterval, 1)\n\nclass RepeatedTimeInterval(val timeInterval: TimeInterval, val number: Int)\noperator fun TimeInterval.times(number: Int) = RepeatedTimeInterval(this, number)\n\noperator fun MyDate.plus(timeIntervals: RepeatedTimeInterval) = addTimeIntervals(timeIntervals.timeInterval, timeIntervals.number)\n"
+          }, {
+            "line" : 15,
+            "start" : 0,
+            "length" : 68,
+            "hint" : "",
+            "possible_answer" : "return today + YEAR * 2 + WEEK * 3 + DAY * 5"
+          } ],
+          "name" : "Task.kt"
+        },
+        "DateUtil.kt" : {
+          "placeholders" : [ ],
+          "name" : "DateUtil.kt"
+        }
+      }
+    }, {
+      "name" : "Destructuring declarations",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 2,
+            "start" : 0,
+            "length" : 1,
+            "hint" : "",
+            "possible_answer" : "data "
+          } ],
+          "name" : "Task.kt"
+        }
+      }
+    }, {
+      "name" : "Invoke",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 6,
+            "start" : 8,
+            "length" : 6,
+            "hint" : "",
+            "possible_answer" : "numberOfInvocations++\n        return this"
+          } ],
+          "name" : "Task.kt"
+        }
+      }
+    } ]
+  }, {
+    "title" : "Collections",
+    "task_list" : [ {
+      "name" : "Introduction",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 2,
+            "start" : 46,
+            "length" : 6,
+            "hint" : "",
+            "possible_answer" : "customers.toSet()"
+          } ],
+          "name" : "Task.kt"
+        },
+        "Shop.kt" : {
+          "placeholders" : [ ],
+          "name" : "Shop.kt"
+        },
+        "TestShop.kt" : {
+          "placeholders" : [ ],
+          "name" : "TestShop.kt"
+        }
+      }
+    }, {
+      "name" : "Filter map",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 3,
+            "start" : 50,
+            "length" : 6,
+            "hint" : "",
+            "possible_answer" : "customers.map { it.city }.toSet()"
+          }, {
+            "line" : 6,
+            "start" : 56,
+            "length" : 6,
+            "hint" : "",
+            "possible_answer" : "customers.filter { it.city == city }"
+          } ],
+          "name" : "Task.kt"
+        },
+        "Shop.kt" : {
+          "placeholders" : [ ],
+          "name" : "Shop.kt"
+        },
+        "TestShop.kt" : {
+          "placeholders" : [ ],
+          "name" : "TestShop.kt"
+        }
+      }
+    }, {
+      "name" : "All Any and other predicates",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 3,
+            "start" : 57,
+            "length" : 6,
+            "hint" : "",
+            "possible_answer" : "customers.all { it.city == city }"
+          }, {
+            "line" : 6,
+            "start" : 48,
+            "length" : 6,
+            "hint" : "",
+            "possible_answer" : "customers.any { it.city == city }"
+          }, {
+            "line" : 9,
+            "start" : 47,
+            "length" : 6,
+            "hint" : "",
+            "possible_answer" : "customers.count { it.city == city }"
+          }, {
+            "line" : 12,
+            "start" : 54,
+            "length" : 6,
+            "hint" : "",
+            "possible_answer" : "customers.find { it.city == city }"
+          } ],
+          "name" : "Task.kt"
+        },
+        "Shop.kt" : {
+          "placeholders" : [ ],
+          "name" : "Shop.kt"
+        },
+        "TestShop.kt" : {
+          "placeholders" : [ ],
+          "name" : "TestShop.kt"
+        }
+      }
+    }, {
+      "name" : "FlatMap",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 3,
+            "start" : 50,
+            "length" : 6,
+            "hint" : "",
+            "possible_answer" : "orders.flatMap { it.products }.toSet()"
+          }, {
+            "line" : 6,
+            "start" : 49,
+            "length" : 6,
+            "hint" : "",
+            "possible_answer" : "customers.flatMap { it.getOrderedProducts() }.toSet()"
+          } ],
+          "name" : "Task.kt"
+        },
+        "Shop.kt" : {
+          "placeholders" : [ ],
+          "name" : "Shop.kt"
+        },
+        "TestShop.kt" : {
+          "placeholders" : [ ],
+          "name" : "TestShop.kt"
+        }
+      }
+    }, {
+      "name" : "Max min",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 3,
+            "start" : 61,
+            "length" : 6,
+            "hint" : "",
+            "possible_answer" : "customers.maxBy { it.orders.size }"
+          }, {
+            "line" : 6,
+            "start" : 58,
+            "length" : 6,
+            "hint" : "",
+            "possible_answer" : "orders.flatMap { it.products }.maxBy { it.price }"
+          } ],
+          "name" : "Task.kt"
+        },
+        "Shop.kt" : {
+          "placeholders" : [ ],
+          "name" : "Shop.kt"
+        },
+        "TestShop.kt" : {
+          "placeholders" : [ ],
+          "name" : "TestShop.kt"
+        }
+      }
+    }, {
+      "name" : "Sort",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 3,
+            "start" : 64,
+            "length" : 6,
+            "hint" : "",
+            "possible_answer" : "customers.sortedBy { it.orders.size }"
+          } ],
+          "name" : "Task.kt"
+        },
+        "Shop.kt" : {
+          "placeholders" : [ ],
+          "name" : "Shop.kt"
+        },
+        "TestShop.kt" : {
+          "placeholders" : [ ],
+          "name" : "TestShop.kt"
+        }
+      }
+    }, {
+      "name" : "Sum",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 4,
+            "start" : 44,
+            "length" : 6,
+            "hint" : "",
+            "possible_answer" : "orders.flatMap { it.products }.sumByDouble { it.price }"
+          } ],
+          "name" : "Task.kt"
+        },
+        "Shop.kt" : {
+          "placeholders" : [ ],
+          "name" : "Shop.kt"
+        },
+        "TestShop.kt" : {
+          "placeholders" : [ ],
+          "name" : "TestShop.kt"
+        }
+      }
+    }, {
+      "name" : "GroupBy",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 3,
+            "start" : 61,
+            "length" : 6,
+            "hint" : "",
+            "possible_answer" : "customers.groupBy { it.city }"
+          } ],
+          "name" : "Task.kt"
+        },
+        "Shop.kt" : {
+          "placeholders" : [ ],
+          "name" : "Shop.kt"
+        },
+        "TestShop.kt" : {
+          "placeholders" : [ ],
+          "name" : "TestShop.kt"
+        }
+      }
+    }, {
+      "name" : "Partition",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 3,
+            "start" : 79,
+            "length" : 6,
+            "hint" : "",
+            "possible_answer" : "customers.filter {\n    val (delivered, undelivered) = it.orders.partition { it.isDelivered }\n    undelivered.size > delivered.size\n}.toSet()"
+          } ],
+          "name" : "Task.kt"
+        },
+        "Shop.kt" : {
+          "placeholders" : [ ],
+          "name" : "Shop.kt"
+        },
+        "TestShop.kt" : {
+          "placeholders" : [ ],
+          "name" : "TestShop.kt"
+        }
+      }
+    }, {
+      "name" : "Fold",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 4,
+            "start" : 4,
+            "length" : 6,
+            "hint" : "",
+            "possible_answer" : "val allProducts = customers.flatMap { it.orders.flatMap { it.products }}.toSet()\n    return customers.fold(allProducts, {\n        orderedByAll, customer ->\n        orderedByAll.intersect(customer.orders.flatMap { it.products }.toSet())\n    })"
+          } ],
+          "name" : "Task.kt"
+        },
+        "Shop.kt" : {
+          "placeholders" : [ ],
+          "name" : "Shop.kt"
+        },
+        "TestShop.kt" : {
+          "placeholders" : [ ],
+          "name" : "TestShop.kt"
+        }
+      }
+    }, {
+      "name" : "Compound tasks",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 5,
+            "start" : 4,
+            "length" : 6,
+            "hint" : "",
+            "possible_answer" : "return orders.filter { it.isDelivered }.flatMap { it.products }.maxBy { it.price }"
+          }, {
+            "line" : 11,
+            "start" : 4,
+            "length" : 6,
+            "hint" : "",
+            "possible_answer" : "return customers.flatMap { it.getOrderedProductsList() }.count { it == product }"
+          }, {
+            "line" : 14,
+            "start" : 0,
+            "length" : 1,
+            "hint" : "",
+            "possible_answer" : "fun Customer.getOrderedProductsList(): List<Product> {\n    return orders.flatMap { it.products }\n}"
+          } ],
+          "name" : "Task.kt"
+        },
+        "Shop.kt" : {
+          "placeholders" : [ ],
+          "name" : "Shop.kt"
+        },
+        "TestShop.kt" : {
+          "placeholders" : [ ],
+          "name" : "TestShop.kt"
+        }
+      }
+    }, {
+      "name" : "Get used to new style",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 4,
+            "start" : 52,
+            "length" : 6,
+            "hint" : "",
+            "possible_answer" : "s.length"
+          }, {
+            "line" : 6,
+            "start" : 66,
+            "length" : 6,
+            "hint" : "",
+            "possible_answer" : "group.size"
+          }, {
+            "line" : 8,
+            "start" : 56,
+            "length" : 6,
+            "hint" : "",
+            "possible_answer" : "group.size == maximumSizeOfGroup"
+          } ],
+          "name" : "Task.kt"
+        },
+        "Shop.kt" : {
+          "placeholders" : [ ],
+          "name" : "Shop.kt"
+        },
+        "TestShop.kt" : {
+          "placeholders" : [ ],
+          "name" : "TestShop.kt"
+        }
+      }
+    } ]
+  }, {
+    "title" : "Properties",
+    "task_list" : [ {
+      "name" : "Properties",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 5,
+            "start" : 8,
+            "length" : 3,
+            "hint" : "",
+            "possible_answer" : "set(v: Int?) {\n            field = v\n            counter++\n        }"
+          } ],
+          "name" : "Task.kt"
+        }
+      }
+    }, {
+      "name" : "Lazy property",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 3,
+            "start" : 4,
+            "length" : 3,
+            "hint" : "",
+            "possible_answer" : "var value: Int? = null"
+          }, {
+            "line" : 6,
+            "start" : 12,
+            "length" : 6,
+            "hint" : "",
+            "possible_answer" : "if (value == null) {\n                value = initializer()\n            }\n            return value!!"
+          } ],
+          "name" : "Task.kt"
+        }
+      }
+    }, {
+      "name" : "Delegates examples",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 3,
+            "start" : 26,
+            "length" : 6,
+            "hint" : "",
+            "possible_answer" : "lazy(initializer)"
+          } ],
+          "name" : "Task.kt"
+        }
+      }
+    }, {
+      "name" : "Delegates how it works",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 14,
+            "start" : 8,
+            "length" : 6,
+            "hint" : "",
+            "possible_answer" : "return timeInMillis!!.toDate()"
+          }, {
+            "line" : 18,
+            "start" : 8,
+            "length" : 6,
+            "hint" : "",
+            "possible_answer" : "timeInMillis = value.toMillis()"
+          } ],
+          "name" : "Task.kt"
+        },
+        "MyDate.kt" : {
+          "placeholders" : [ ],
+          "name" : "MyDate.kt"
+        }
+      }
+    } ]
+  }, {
+    "title" : "Builders",
+    "task_list" : [ {
+      "name" : "Extension function literals",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 3,
+            "start" : 38,
+            "length" : 6,
+            "hint" : "",
+            "possible_answer" : "this % 2 == 0"
+          }, {
+            "line" : 4,
+            "start" : 37,
+            "length" : 6,
+            "hint" : "",
+            "possible_answer" : "this % 2 != 0"
+          } ],
+          "name" : "Task.kt"
+        }
+      }
+    }, {
+      "name" : "String and map builders",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 4,
+            "start" : 0,
+            "length" : 3,
+            "hint" : "",
+            "possible_answer" : "fun <K, V> buildMap(build: HashMap<K, V>.() -> Unit): Map<K, V> {\n    val map = HashMap<K, V>()\n    map.build()\n    return map\n}"
+          } ],
+          "name" : "Task.kt"
+        }
+      }
+    }, {
+      "name" : "The function apply",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 2,
+            "start" : 40,
+            "length" : 6,
+            "hint" : "",
+            "possible_answer" : "f(); return this"
+          } ],
+          "name" : "Task.kt"
+        }
+      }
+    }, {
+      "name" : "Html builders",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 5,
+            "start" : 15,
+            "length" : 1,
+            "hint" : "",
+            "possible_answer" : "(color = getTitleColor())"
+          }, {
+            "line" : 17,
+            "start" : 12,
+            "length" : 6,
+            "hint" : "",
+            "possible_answer" : "for ((index, product) in products.withIndex()) {\n                tr {\n                    td (color = getCellColor(index, 0)) {\n                        text(product.description)\n                    }\n                    td (color = getCellColor(index, 1)) {\n                        text(product.price)\n                    }\n                    td (color = getCellColor(index, 2)) {\n                        text(product.popularity)\n                    }\n                }\n            }"
+          } ],
+          "name" : "Task.kt"
+        },
+        "data.kt" : {
+          "placeholders" : [ ],
+          "name" : "data.kt"
+        },
+        "html.kt" : {
+          "placeholders" : [ ],
+          "name" : "html.kt"
+        },
+        "main.kt" : {
+          "placeholders" : [ ],
+          "name" : "main.kt"
+        }
+      }
+    }, {
+      "name" : "Builders how it works",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 7,
+            "start" : 8,
+            "length" : 42,
+            "hint" : "",
+            "possible_answer" : "1 to c, 2 to b, 3 to b, 4 to c"
+          } ],
+          "name" : "Task.kt"
+        }
+      }
+    } ]
+  }, {
+    "title" : "Generics",
+    "task_list" : [ {
+      "name" : "Generic functions",
+      "task_files" : {
+        "Task.kt" : {
+          "placeholders" : [ {
+            "line" : 4,
+            "start" : 0,
+            "length" : 26,
+            "hint" : "",
+            "possible_answer" : "fun <T, C: MutableCollection<T>> Collection<T>.partitionTo(first: C, second: C, predicate: (T) -> Boolean): Pair<C, C> {\n    for (element in this) {\n        if (predicate(element)) {\n            first.add(element)\n        } else {\n            second.add(element)\n        }\n    }\n    return Pair(first, second)\n}"
+          } ],
+          "name" : "Task.kt"
+        }
+      }
+    } ]
+  } ],
+  "description" : "Kotlin Koans",
+  "name" : "Kotlin Koans",
+  "authors" : [ ],
+  "language" : "kotlin"
+}
