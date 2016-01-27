@@ -5,7 +5,7 @@ import java.util.*
 
 fun convertForWebDemo(parentDir: File, koansDir: File, links: Properties) {
 
-    val linksMap = links.stringPropertyNames().toMap { Pair("($it)", "(${links.getProperty(it)})") }
+    val linksMap = links.stringPropertyNames().toMap { Pair("]($it)", "](${links.getProperty(it)})") }
     copyFolderAndTransformFiles(koansDir, parentDir) {
         fileName, fileText ->
         when (fileName) {
