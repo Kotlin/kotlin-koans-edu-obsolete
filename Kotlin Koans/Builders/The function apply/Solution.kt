@@ -1,4 +1,4 @@
-<answer>fun <T> T.myApply(f: T.() -> Unit): T { <taskWindow>f(); return this<taskWindow> }</answer>
+<answer>fun <T> T.myApply(f: T.() -> Unit): T { <taskWindow>f(); return this</taskWindow> }</answer>
 
 fun buildString(): String {
     return StringBuilder().myApply {

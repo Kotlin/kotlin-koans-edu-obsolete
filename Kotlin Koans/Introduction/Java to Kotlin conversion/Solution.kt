@@ -1,5 +1,5 @@
-fun toJSON(collection: Collection<Int>): String {
-    <taskWindow>val sb = StringBuilder()
+<taskWindow>fun toJSON(collection: Collection<Int>): String {
+    val sb = StringBuilder()
     sb.append("[")
     val iterator = collection.iterator()
     while (iterator.hasNext())
@@ -12,5 +12,5 @@ fun toJSON(collection: Collection<Int>): String {
         }
     }
     sb.append("]")
-    return sb.toString()</taskWindow>
-}
+    return sb.toString()
+}</taskWindow>

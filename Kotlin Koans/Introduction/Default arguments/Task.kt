@@ -1,5 +1,5 @@
-<taskWindow>fun foo(name: String, number: Int, toUpperCase: Boolean) =
-        (if (toUpperCase) name.toUpperCase() else name) + number<taskWindow>
+<taskWindow>fun foo(name: String, number: Int, toUpperCase: Boolean)</taskWindow> =
+        (if (toUpperCase) name.toUpperCase() else name) + number
 
 fun useFoo() = listOf(
         foo("a"),
