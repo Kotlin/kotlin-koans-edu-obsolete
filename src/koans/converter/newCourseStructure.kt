@@ -1,19 +1,19 @@
 package koans.converter
 
-data class Course(
+class Course(
         val lessons: List<Lesson>,
         val description: String,
         val name: String,
         val authors: List<String>,
         val language: String)
 
-data class Lesson(val title: String, val task_list: List<Task>)
+class Lesson(val title: String, val task_list: List<Task>)
 
-data class Task(val name: String, val task_files: Map<String, TaskFile>)
+class Task(val name: String, val task_files: Map<String, TaskFile>)
 
-data class TaskFile(val placeholders: List<Placeholder>, val name: String)
+class TaskFile(val placeholders: List<Placeholder>, val name: String)
 
-data class Placeholder(
+class Placeholder(
         val line: Int,
         val start: Int,
         val length: Int,
