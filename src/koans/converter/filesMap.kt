@@ -33,3 +33,5 @@ fun <R> List<File>.mapAndRecord(filesMap: FilesMap, transform: (File) -> R) = ma
     filesMap.record(result, it)
     result
 }
+
+fun File.getSourceFiles(): List<File> = listFiles().filter { it.isFile && it.name.isSourceCodeFileName() }

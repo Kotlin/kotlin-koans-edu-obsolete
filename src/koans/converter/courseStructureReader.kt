@@ -8,9 +8,11 @@ fun readCourse(koansDir: File, filesMap: FilesMap): Course {
     val lessons = koansDir.mapSubDirectoriesAndRecord(filesMap) {
         lessonDir ->
 
+        val commonLessonFiles = lessonDir.getSourceFiles()
+
         val tasks = lessonDir.mapSubDirectoriesAndRecord(filesMap) {
             taskDir ->
-            readTask(taskDir, filesMap)
+            readTask(taskDir, filesMap, commonLessonFiles)
         }
         val lessonStructure = structureReader.readLessonStructure(lessonDir.structureFile())
         val sortedTasks = tasks.sortAccordingToStructure(lessonStructure.examples, Task::name)
@@ -22,7 +24,7 @@ fun readCourse(koansDir: File, filesMap: FilesMap): Course {
     return Course(sortedLessons, COURSE_DESCRIPTION, COURSE_NAME, COURSE_AUTHORS, COURSE_LANGUAGE)
 }
 
-private fun readTask(taskDir: File, filesMap: FilesMap): Task {
+private fun readTask(taskDir: File, filesMap: FilesMap, commonLessonFiles: List<File>): Task {
     val solutionFile = taskDir.subFile(SOLUTION_KT)
     val solutions = solutionFile.readText().getSolutionsInTaskWindows()
     val taskFile = taskDir.subFile(TASK_KT)
@@ -33,19 +35,23 @@ private fun readTask(taskDir: File, filesMap: FilesMap): Task {
         val (range, solution) = it
 
         val lineNumber = range.line + 2 // 2 lines for import directive
-        Placeholder(lineNumber, range.start, range.length, "", solution.escape())
+        Placeholder(lineNumber, range.start, range.length, "", solution)
     }
     val mainTaskFile = TaskFile(placeholders, taskFile.name)
     filesMap.record(mainTaskFile, taskFile)
 
     fun String.isOtherSourceFile(): Boolean {
-        return this.endsWith(".kt") && (this !in setOf(SOLUTION_KT, TASK_KT, TEST_KT))
+        return isSourceCodeFileName() && (this !in setOf(SOLUTION_KT, TASK_KT, TEST_KT))
     }
     val otherTaskFiles = taskDir.filterSubDirectories { it.name.isOtherSourceFile() }.mapAndRecord(filesMap) {
         taskFile ->
         TaskFile(listOf(), taskFile.name)
     }
-    val taskFiles = arrayListOf<TaskFile>() + mainTaskFile + otherTaskFiles
+    val commonTaskFiles = commonLessonFiles.mapAndRecord(filesMap) {
+        commonFile ->
+        TaskFile(listOf(), commonFile.name)
+    }
+    val taskFiles = arrayListOf<TaskFile>() + mainTaskFile + otherTaskFiles + commonTaskFiles
     return Task(taskDir.name, taskFiles.toMap { it.name to it })
 }
 
