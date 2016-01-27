@@ -1,1 +1,1 @@
-fun start() = <taskWindow>"OK"</taskWindow>
+fun start(): String = <taskWindow>"OK"</taskWindow>
