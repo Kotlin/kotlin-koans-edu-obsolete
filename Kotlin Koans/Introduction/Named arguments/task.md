@@ -1,8 +1,8 @@
 ## Named arguments
 
-[Default and named](http://kotlinlang.org/docs/reference/functions.html#default-arguments)
+[Default and named](default_and_named)
 arguments help to minimize the number of overloads and improve the readability of the function invocation.
-The library function [`joinToString`](http://kotlinlang.org/api/latest/jvm/stdlib/kotlin/join-to-string.html)
+The library function [`joinToString`](join_to_string)
 is declared with default values for parameters:
 
 ```

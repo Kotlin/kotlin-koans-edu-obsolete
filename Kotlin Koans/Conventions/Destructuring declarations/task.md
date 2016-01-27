@@ -1,4 +1,4 @@
 ## Destructuring declarations
 
-Read about [destructuring declarations](http://kotlinlang.org/docs/reference/multi-declarations.html#multi-declarations)
+Read about [destructuring declarations](destructuring_declarations)
 and make the following code compile by adding one word.

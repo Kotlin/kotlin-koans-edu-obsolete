@@ -3,6 +3,7 @@ package koans.converter
 val KOANS_DIR = "Kotlin Koans"
 val CONVERTED_KOANS_DIR = "Kotlin Koans Converted"
 val ZIP_FILE_NAME = "Kotlin Koans.zip"
+val LINKS_PROPERTIES = "$KOANS_DIR/links.properties"
 
 val COURSE_DESCRIPTION = "Kotlin Koans"
 val COURSE_NAME = "Kotlin Koans"

@@ -1,10 +1,9 @@
 package koans.converter
 
-import org.pegdown.Extensions
-import org.pegdown.PegDownProcessor
 import java.io.File
+import java.util.*
 
-fun convertTasks(parentDir: File, course: Course, filesMap: FilesMap) {
+fun convertTasks(parentDir: File, course: Course, filesMap: FilesMap, links: Properties) {
     for ((lessonIndex, lesson) in course.lessons.withIndex()) {
         val lessonDirName = "$LESSON_DIR${lessonIndex + 1}"
         val lessonDir = parentDir.subFile(lessonDirName)
@@ -24,7 +23,7 @@ fun convertTasks(parentDir: File, course: Course, filesMap: FilesMap) {
             val packageName = "$lessonDirName.$taskDirName"
 
             val taskInMD = taskDirectory.subFile(TASK_EE_MD).let { if (it.exists()) it else taskDirectory.subFile(TASK_MD) }
-            copyFileTaskAndTransform(taskInMD, TASK_HTML) { convertMarkdownToHtml(this) }
+            copyFileTaskAndTransform(taskInMD, TASK_HTML) { convertMarkdownToHtml(this, links) }
 
             copyFileTaskAndTransform(taskDirectory.subFile(TEST_KT), TESTS_KT) { addPackageNameAndImportForTests(packageName) }
 
@@ -36,9 +35,4 @@ fun convertTasks(parentDir: File, course: Course, filesMap: FilesMap) {
             }
         }
     }
-}
-
-fun convertMarkdownToHtml(markdownText: String): String {
-    val processor = PegDownProcessor(Extensions.FENCED_CODE_BLOCKS)
-    return GFMNodeSerializer().toHtml(processor.parseMarkdown(markdownText.toCharArray()));
 }

@@ -2,6 +2,8 @@ package koans.converter
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import java.io.File
+import java.io.FileInputStream
+import java.util.*
 
 fun main(args: Array<String>) {
     val filesMap = FilesMap()
@@ -12,7 +14,10 @@ fun main(args: Array<String>) {
 
     writeJson(course, convertedKoansDir.subFile(COURSE_JSON))
 
-    convertTasks(convertedKoansDir, course, filesMap)
+    val links = Properties()
+    FileInputStream(File(LINKS_PROPERTIES)).use { links.load(it) }
+
+    convertTasks(convertedKoansDir, course, filesMap, links)
 
     packToZip(convertedKoansDir.path, ZIP_FILE_NAME)
 }

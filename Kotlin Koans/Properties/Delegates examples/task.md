@@ -1,4 +1,4 @@
 ## Delegates example
 
-Read about [delegated properties](http://kotlinlang.org/docs/reference/delegated-properties.html)
+Read about [delegated properties](delegated_properties)
 and make the property lazy by using delegates.

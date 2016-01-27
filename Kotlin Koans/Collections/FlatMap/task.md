@@ -1,7 +1,7 @@
 ## FlatMap
 
 Implement `Customer.getOrderedProducts()` and `Shop.getAllOrderedProducts()` using
-[`flatMap`](http://kotlinlang.org/api/latest/jvm/stdlib/kotlin/flat-map.html).
+[`flatMap`](flat-map).
 
 ```kotlin
 val result = listOf("abc", "12").flatMap { it.toCharList() }
