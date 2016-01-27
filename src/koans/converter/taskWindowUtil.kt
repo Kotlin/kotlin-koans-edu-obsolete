@@ -21,6 +21,8 @@ fun String.getTaskWindowsFromText(): List<TextRange> {
 
 fun String.removeTaskWindowTags() = replace("<taskWindow>", "").replace("</taskWindow>", "")
 
+fun String.removeTaskWindowTagsWithWhitespaces() = replace("<taskWindow>    </taskWindow>\n\n", "").replace("<taskWindow>    </taskWindow>", "")
+
 fun String.getSolutionsInTaskWindows(): List<String> {
     return split("<taskWindow>").filter { it.contains("</taskWindow>") }.map { it.split("</taskWindow>").first() }
 }
