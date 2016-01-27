@@ -6,6 +6,11 @@ fun File.subFile(name: String) = File("$path/$name")
 
 fun File.structureFile() = subFile(MANIFEST_JSON)
 
+fun newDir(name: String) = File(name).apply {
+    if (exists()) deleteRecursively()
+    mkdir()
+}
+
 fun String.addPackageName(packageName: String) = "package $packageName\n\n" + this
 
 fun String.addPackageNameAndImportForTests(packageName: String) = "package $packageName.tests\n\nimport $packageName.*\n" + this

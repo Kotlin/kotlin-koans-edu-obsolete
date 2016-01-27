@@ -10,8 +10,7 @@ fun main(args: Array<String>) {
     val koansDir = File(KOANS_DIR)
     val course = readCourse(koansDir, filesMap)
 
-    val convertedKoansDir = File(CONVERTED_KOANS_DIR_EE)
-    convertedKoansDir.mkdir()
+    val convertedKoansDir = newDir(CONVERTED_KOANS_DIR_EE)
 
     writeJson(course, convertedKoansDir.subFile(COURSE_JSON))
 
@@ -22,7 +21,7 @@ fun main(args: Array<String>) {
 
     packToZip(convertedKoansDir.path, ZIP_FILE_NAME)
 
-    val convertedForWD = File(CONVERTED_KOANS_DIR_WD)
+    val convertedForWD = newDir(CONVERTED_KOANS_DIR_WD)
     convertForWebDemo(convertedForWD, koansDir, links)
 }
 
