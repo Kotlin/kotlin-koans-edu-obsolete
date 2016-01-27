@@ -2,7 +2,7 @@ package lesson5.task2
 
 import java.util.HashMap
 
-   
+
 
 fun usage(): Map<Int, String> {
     return buildMap {

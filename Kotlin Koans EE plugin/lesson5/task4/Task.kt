@@ -3,7 +3,7 @@ package lesson5.task4
 fun renderProductTable(): String {
     return html {
         table {
-            tr   {
+            tr {
                 td {
                     text("Product")
                 }

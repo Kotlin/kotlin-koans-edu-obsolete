@@ -1,6 +1,6 @@
 package lesson2.task6
 
- class MyDate(val year: Int, val month: Int, val dayOfMonth: Int)
+class MyDate(val year: Int, val month: Int, val dayOfMonth: Int)
 
 fun isLeapDay(date: MyDate): Boolean {
 

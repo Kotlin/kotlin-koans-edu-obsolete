@@ -10,4 +10,4 @@ fun Shop.getNumberOfTimesProductWasOrdered(product: Product): Int {
     <taskWindow>TODO()</taskWindow>
 }
 
-<taskWindow> </taskWindow>
+<taskWindow>    </taskWindow>

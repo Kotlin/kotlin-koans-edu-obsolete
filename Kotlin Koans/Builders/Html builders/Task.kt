@@ -1,7 +1,7 @@
 fun renderProductTable(): String {
     return html {
         table {
-            tr <taskWindow> </taskWindow> {
+            tr <taskWindow>    </taskWindow>{
                 td {
                     text("Product")
                 }
