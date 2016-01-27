@@ -732,7 +732,7 @@
   }, {
     "title" : "Builders",
     "task_list" : [ {
-      "name" : "Extension function literals",
+      "name" : "Function literals with receiver",
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
