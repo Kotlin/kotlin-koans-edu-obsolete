@@ -1,4 +1,4 @@
-package lesson2.task4
+package task4
 
 data class MyDate(val year: Int, val month: Int, val dayOfMonth: Int) : Comparable<MyDate>{
     override fun compareTo(other: MyDate): Int{

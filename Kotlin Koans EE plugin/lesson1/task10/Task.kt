@@ -1,4 +1,4 @@
-package lesson1.task10
+package task10
 
 fun Int.r(): RationalNumber = TODO()
 fun Pair<Int, Int>.r(): RationalNumber = TODO()

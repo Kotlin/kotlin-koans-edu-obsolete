@@ -1,4 +1,4 @@
-package lesson3.task12
+package task12
 
 fun doSomethingStrangeWithCollection(collection: Collection<String>): Collection<String>? {
 

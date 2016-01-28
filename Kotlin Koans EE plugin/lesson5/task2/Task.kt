@@ -1,4 +1,4 @@
-package lesson5.task2
+package task2
 
 import java.util.HashMap
 

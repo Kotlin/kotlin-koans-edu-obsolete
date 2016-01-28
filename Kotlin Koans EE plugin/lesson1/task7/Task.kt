@@ -1,4 +1,4 @@
-package lesson1.task7
+package task7
 
 class Person
 

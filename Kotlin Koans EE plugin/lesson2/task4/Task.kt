@@ -1,4 +1,4 @@
-package lesson2.task4
+package task4
 
 class DateRange(val start: MyDate, val end: MyDate)
 

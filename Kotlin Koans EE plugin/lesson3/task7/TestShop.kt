@@ -1,4 +1,4 @@
-package lesson3.task7
+package task7
 
 //products
 val idea = Product("IntelliJ IDEA Ultimate", 199.0)

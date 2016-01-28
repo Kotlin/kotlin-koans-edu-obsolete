@@ -1,4 +1,4 @@
-package lesson5.task5
+package task5
 
 import Answer.*
 

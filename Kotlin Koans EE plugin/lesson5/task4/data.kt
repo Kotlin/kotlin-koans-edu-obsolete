@@ -1,4 +1,4 @@
-package lesson5.task4
+package task4
 
 data class Product(val description: String, val price: Double, val popularity: Int)
 

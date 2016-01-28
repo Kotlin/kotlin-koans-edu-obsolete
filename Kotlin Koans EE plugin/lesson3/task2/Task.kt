@@ -1,4 +1,4 @@
-package lesson3.task2
+package task2
 
 // Return the set of cities the customers are from
 fun Shop.getCitiesCustomersAreFrom(): Set<City> = TODO()

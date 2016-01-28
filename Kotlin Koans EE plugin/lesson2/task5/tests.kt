@@ -1,6 +1,6 @@
-package lesson2.task5.tests
+package task5.tests
 
-import lesson2.task5.*
+import task5.*
 import org.junit.Assert
 import org.junit.Test
 import TimeInterval.*

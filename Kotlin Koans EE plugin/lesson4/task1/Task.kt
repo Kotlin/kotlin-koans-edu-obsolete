@@ -1,4 +1,4 @@
-package lesson4.task1
+package task1
 
 class PropertyExample() {
     var counter = 0

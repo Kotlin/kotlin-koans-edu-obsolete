@@ -1,4 +1,4 @@
-package lesson1.task9
+package task9
 
 fun eval(expr: Expr): Int =
         when (expr) {

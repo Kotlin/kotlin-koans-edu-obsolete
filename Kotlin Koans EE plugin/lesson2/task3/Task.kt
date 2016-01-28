@@ -1,4 +1,4 @@
-package lesson2.task3
+package task3
 
 operator fun MyDate.rangeTo(other: MyDate) = TODO()
 

@@ -1,4 +1,4 @@
-package lesson1.task11
+package task11
 
 import java.util.*
 

@@ -1,4 +1,4 @@
-package lesson5.task1
+package task1
 
 fun task(): List<Boolean> {
     val isEven: Int.() -> Boolean = { TODO() }

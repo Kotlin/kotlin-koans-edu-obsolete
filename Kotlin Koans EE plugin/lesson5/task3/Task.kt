@@ -1,4 +1,4 @@
-package lesson5.task3
+package task3
 
 fun <T> T.myApply(f: T.() -> Unit): T { TODO() }
 

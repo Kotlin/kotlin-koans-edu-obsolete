@@ -1,3 +1,3 @@
-package lesson1.task2
+package task2
 
 fun toJSON(collection: Collection<Int>): String = TODO()

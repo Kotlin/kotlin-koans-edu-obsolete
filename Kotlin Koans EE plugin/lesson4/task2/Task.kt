@@ -1,4 +1,4 @@
-package lesson4.task2
+package task2
 
 class LazyProperty(val initializer: () -> Int) {
     

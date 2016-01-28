@@ -1,4 +1,4 @@
-package lesson3.task7
+package task7
 
 // Return the sum of prices of all products that a customer has ordered.
 // Note: the customer may order the same product for several times.

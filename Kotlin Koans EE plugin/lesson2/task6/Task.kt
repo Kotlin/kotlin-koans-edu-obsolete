@@ -1,4 +1,4 @@
-package lesson2.task6
+package task6
 
 class MyDate(val year: Int, val month: Int, val dayOfMonth: Int)
 

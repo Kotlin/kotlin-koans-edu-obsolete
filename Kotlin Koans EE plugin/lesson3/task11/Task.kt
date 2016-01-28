@@ -1,4 +1,4 @@
-package lesson3.task11
+package task11
 
 // Return the most expensive product among all delivered products
 // (use the Order.isDelivered flag)

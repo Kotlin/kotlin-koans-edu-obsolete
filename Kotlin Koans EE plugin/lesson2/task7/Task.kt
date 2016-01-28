@@ -1,4 +1,4 @@
-package lesson2.task7
+package task7
 
 class Invokable {
     public var numberOfInvocations: Int = 0

@@ -1,4 +1,4 @@
-package lesson5.task4
+package task4
 
 import kotlin.browser.document
 

@@ -1,4 +1,4 @@
-package lesson1.task4
+package task4
 
 fun foo(name: String, number: Int, toUpperCase: Boolean) =
         (if (toUpperCase) name.toUpperCase() else name) + number

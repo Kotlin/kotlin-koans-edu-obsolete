@@ -20,7 +20,7 @@ fun convertTasks(parentDir: File, course: Course, filesMap: FilesMap, links: Pro
             }
 
             val taskDirectory = filesMap[task]
-            val packageName = "$lessonDirName.$taskDirName"
+            val packageName = "$taskDirName"
 
             val taskInMD = taskDirectory.subFile(TASK_EE_MD).let { if (it.exists()) it else taskDirectory.subFile(TASK_MD) }
             copyFileTaskAndTransform(taskInMD, TASK_HTML) { convertMarkdownToHtml(this, links) }

@@ -1,6 +1,6 @@
-package lesson3.task10.tests
+package task10.tests
 
-import lesson3.task10.*
+import task10.*
 import org.junit.Assert
 import org.junit.Test
 

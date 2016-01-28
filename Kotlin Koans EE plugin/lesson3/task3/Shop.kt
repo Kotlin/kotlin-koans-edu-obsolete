@@ -1,4 +1,4 @@
-package lesson3.task3
+package task3
 
 data class Shop(val name: String, val customers: List<Customer>)
 

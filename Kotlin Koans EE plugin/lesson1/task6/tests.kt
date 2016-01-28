@@ -1,6 +1,6 @@
-package lesson1.task6.tests
+package task6.tests
 
-import lesson1.task6.*
+import task6.*
 import kotlin.test.*
 import org.junit.Test
 import org.junit.Assert

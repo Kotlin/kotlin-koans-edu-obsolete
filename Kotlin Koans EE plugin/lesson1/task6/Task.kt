@@ -1,4 +1,4 @@
-package lesson1.task6
+package task6
 
 val month = "(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)"
 

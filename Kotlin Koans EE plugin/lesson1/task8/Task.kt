@@ -1,4 +1,4 @@
-package lesson1.task8
+package task8
 
 fun sendMessageToClient(
         client: Client?, message: String?, mailer: Mailer
