@@ -7,7 +7,7 @@ data class TextRange(val line: Int, val start: Int, val length: Int)
 private val TASK_WINDOW = "taskWindow"
 private val OPEN = "<$TASK_WINDOW>"
 private val CLOSED = "</$TASK_WINDOW>"
-private val EMPTY_TASK_WINDOW = "$OPEN    $CLOSED"
+private val EMPTY_TASK_WINDOW = "$OPEN/* TODO */$CLOSED"
 
 fun String.getTaskWindowsFromText(): List<TextRange> {
     val textRanges = ArrayList<TextRange>()

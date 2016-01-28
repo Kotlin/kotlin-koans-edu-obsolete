@@ -209,7 +209,7 @@
           "placeholders" : [ {
             "line" : 3,
             "start" : 4,
-            "length" : 4,
+            "length" : 10,
             "hint" : "",
             "possible_answer" : "override fun compareTo(other: MyDate) = when {\n        year != other.year -> year - other.year\n        month != other.month -> month - other.month\n        else -> dayOfMonth - other.dayOfMonth\n    }"
           } ],
@@ -223,7 +223,7 @@
           "placeholders" : [ {
             "line" : 2,
             "start" : 60,
-            "length" : 4,
+            "length" : 10,
             "hint" : "",
             "possible_answer" : " {\n    operator fun contains(item: MyDate): Boolean = start <= item && item <= endInclusive\n}"
           } ],
@@ -305,7 +305,7 @@
           "placeholders" : [ {
             "line" : 2,
             "start" : 0,
-            "length" : 4,
+            "length" : 10,
             "hint" : "",
             "possible_answer" : "data "
           } ],
@@ -604,7 +604,7 @@
           }, {
             "line" : 14,
             "start" : 0,
-            "length" : 4,
+            "length" : 10,
             "hint" : "",
             "possible_answer" : "fun Customer.getOrderedProductsList(): List<Product> {\n    return orders.flatMap { it.products }\n}"
           } ],
@@ -677,7 +677,7 @@
           "placeholders" : [ {
             "line" : 3,
             "start" : 4,
-            "length" : 4,
+            "length" : 10,
             "hint" : "",
             "possible_answer" : "var value: Int? = null"
           }, {
@@ -758,7 +758,7 @@
           "placeholders" : [ {
             "line" : 4,
             "start" : 0,
-            "length" : 4,
+            "length" : 10,
             "hint" : "",
             "possible_answer" : "fun <K, V> buildMap(build: HashMap<K, V>.() -> Unit): Map<K, V> {\n    val map = HashMap<K, V>()\n    map.build()\n    return map\n}"
           } ],
@@ -786,7 +786,7 @@
           "placeholders" : [ {
             "line" : 5,
             "start" : 15,
-            "length" : 4,
+            "length" : 10,
             "hint" : "",
             "possible_answer" : "(color = getTitleColor())"
           }, {
