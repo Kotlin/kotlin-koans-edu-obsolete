@@ -11,8 +11,10 @@ fun newDir(name: String) = File(name).apply {
     mkdir()
 }
 
-fun String.addPackageName(packageName: String) = "package $packageName\n\n" + this
+fun String.addPackageName(fileName: String, packageName: String) =
+        "package $packageName" + (if (fileName.endsWith("java")) ";" else "") + "\n\n" + this
 
-fun String.addPackageNameAndImportForTests(packageName: String) = "package $packageName.tests\n\nimport $packageName.*\n" + this
+fun String.addPackageNameAndImportForTests(fileName: String, packageName: String) =
+        ("import $packageName.*\n" + this).addPackageName(fileName, "$packageName.tests")
 
 fun String.isSourceCodeFileName() = CODE_FILE_EXTENSIONS.any { this.endsWith(it) }

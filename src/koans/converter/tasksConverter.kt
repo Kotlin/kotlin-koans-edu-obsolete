@@ -25,12 +25,12 @@ fun convertTasks(parentDir: File, course: Course, filesMap: FilesMap, links: Pro
             val taskInMD = taskDirectory.subFile(TASK_EE_MD).let { if (it.exists()) it else taskDirectory.subFile(TASK_MD) }
             copyFileTaskAndTransform(taskInMD, TASK_HTML) { convertMarkdownToHtml(this, links) }
 
-            copyFileTaskAndTransform(taskDirectory.subFile(TEST_KT), TESTS_KT) { addPackageNameAndImportForTests(packageName) }
+            copyFileTaskAndTransform(taskDirectory.subFile(TEST_KT), TESTS_KT) { addPackageNameAndImportForTests(TEST_KT, packageName) }
 
             for ((name, taskFile) in task.task_files) {
 
                 copyFileTaskAndTransform(filesMap[taskFile], filesMap[taskFile].name) {
-                    (if (taskFile.placeholders.isEmpty()) this else removeTaskWindowTags()).addPackageName(packageName)
+                    (if (taskFile.placeholders.isEmpty()) this else removeTaskWindowTags()).addPackageName(taskFile.name, packageName)
                 }
             }
         }
