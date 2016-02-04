@@ -52,7 +52,7 @@ private fun readTask(taskDir: File, filesMap: FilesMap, commonLessonFiles: List<
         TaskFile(listOf(), commonFile.name)
     }
     val taskFiles = arrayListOf<TaskFile>() + mainTaskFile + otherTaskFiles + commonTaskFiles
-    return Task(taskDir.name, taskFiles.toMap { it.name to it })
+    return Task(taskDir.name, taskFiles.associate { it.name to it })
 }
 
 private fun <T> List<T>.sortAccordingToStructure(structure: List<String>, getName: T.() -> String): List<T> {
