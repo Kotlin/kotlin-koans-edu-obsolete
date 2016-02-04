@@ -3,7 +3,7 @@ package task4
 fun renderProductTable(): String {
     return html {
         table {
-            tr {
+            tr /* TODO */{
                 td {
                     text("Product")
                 }
