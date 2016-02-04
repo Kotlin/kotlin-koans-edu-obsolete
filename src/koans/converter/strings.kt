@@ -9,7 +9,7 @@ val LINKS_PROPERTIES = "links.properties"
 val COURSE_DESCRIPTION = "Kotlin Koans"
 val COURSE_NAME = "Kotlin Koans"
 val COURSE_LANGUAGE = "kotlin"
-val COURSE_AUTHORS = listOf<String>() // todo should it be a list of strings?
+val COURSE_AUTHORS = emptyList<String>() // todo should it be a list of strings?
 
 // old
 val MANIFEST_JSON = "manifest.json"
