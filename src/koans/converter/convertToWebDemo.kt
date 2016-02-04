@@ -36,4 +36,4 @@ fun copyFolderAndTransformFiles(from: File, to: File, transform: (String, String
     }
 }
 
-fun File.shouldNotBeCopied() = name == LINKS_PROPERTIES
+fun File.shouldNotBeCopied() = name == LINKS_PROPERTIES || name.endsWith(".java")
