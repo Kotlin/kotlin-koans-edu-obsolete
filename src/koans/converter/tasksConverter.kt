@@ -4,6 +4,8 @@ import java.io.File
 import java.util.*
 
 fun convertTasks(parentDir: File, course: Course, filesMap: FilesMap, links: Properties) {
+    copyUtilFile(parentDir, course, filesMap)
+
     for ((lessonIndex, lesson) in course.lessons.withIndex()) {
         val lessonDirName = "$LESSON_DIR${lessonIndex + 1}"
         val lessonDir = parentDir.subFile(lessonDirName)
@@ -14,9 +16,9 @@ fun convertTasks(parentDir: File, course: Course, filesMap: FilesMap, links: Pro
             val taskDir = lessonDir.subFile(taskDirName)
             taskDir.mkdir()
 
-            fun copyFileTaskAndTransform(oldFile: File, newFileName: String, transform: String.() -> String = { this }) {
+            fun copyFileTaskAndTransform(oldFile: File, newFileName: String, transform: String.() -> String) {
                 val newFile = taskDir.subFile(newFileName)
-                newFile.writeText(oldFile.readText().transform())
+                copyFileTaskAndTransform(oldFile, newFile, transform)
             }
 
             val taskDirectory = filesMap[task]
@@ -35,4 +37,16 @@ fun convertTasks(parentDir: File, course: Course, filesMap: FilesMap, links: Pro
             }
         }
     }
+}
+
+private fun copyUtilFile(parentDir: File, course: Course, filesMap: FilesMap) {
+    val utilFile = filesMap[course].subFile(UTIL_FILE)
+    val newUtilDir = parentDir.subFile(NEW_UTIL_DIR)
+    newUtilDir.mkdir()
+    val newUtilFile = newUtilDir.subFile(UTIL_FILE)
+    copyFileTaskAndTransform(utilFile, newUtilFile)
+}
+
+private fun copyFileTaskAndTransform(oldFile: File, newFile: File, transform: String.() -> String = { this }) {
+    newFile.writeText(oldFile.readText().transform())
 }

@@ -21,7 +21,7 @@ fun readCourse(koansDir: File, filesMap: FilesMap): Course {
     val courseStructure = structureReader.readCourseStructure(koansDir.structureFile())
 
     val sortedLessons = lessons.sortAccordingToStructure(courseStructure.folders, Lesson::title)
-    return Course(sortedLessons, COURSE_DESCRIPTION, COURSE_NAME, COURSE_AUTHORS, COURSE_LANGUAGE)
+    return Course(sortedLessons, COURSE_DESCRIPTION, COURSE_NAME, COURSE_AUTHORS, COURSE_LANGUAGE).apply { filesMap.record(this, koansDir) }
 }
 
 private fun readTask(taskDir: File, filesMap: FilesMap, commonLessonFiles: List<File>): Task {

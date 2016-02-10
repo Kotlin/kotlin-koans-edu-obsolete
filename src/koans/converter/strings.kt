@@ -19,6 +19,7 @@ val TASK_EE_MD = "task-ee.md"
 val SOLUTION_KT = "Solution.kt"
 val TEST_KT = "Test.kt"
 val CODE_FILE_EXTENSIONS = setOf(".kt", ".java")
+val UTIL_FILE = "koansTestUtil.kt"
 
 // new
 val COURSE_JSON = "course.json"
@@ -26,3 +27,4 @@ val TESTS_KT = "tests.kt"
 val TASK_HTML = "task.html"
 val LESSON_DIR = "lesson"
 val TASK_DIR = "task"
+val NEW_UTIL_DIR = "util"
