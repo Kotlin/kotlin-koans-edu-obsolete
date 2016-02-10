@@ -3,6 +3,7 @@ import org.junit.Test
 
 class TestIntroduction {
     @Test fun testSetOfCustomers(){
-        Assert.assertEquals(shop.getSetOfCustomers(), customers.values.toSet())
+        Assert.assertTrue(errorMessage("getSetOfCustomers"),
+                shop.getSetOfCustomers() == customers.values.toSet())
     }
 }

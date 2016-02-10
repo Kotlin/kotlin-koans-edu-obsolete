@@ -6,6 +6,7 @@ import org.junit.Test
 
 class TestPartition {
     @Test fun testGetCustomersWhoHaveMoreUndeliveredOrdersThanDelivered() {
-        Assert.assertEquals(setOf(customers[reka]), shop.getCustomersWithMoreUndeliveredOrdersThanDelivered())
+        Assert.assertTrue(errorMessage("getCustomerWithMaximumNumberOfOrders"),
+                setOf(customers[reka]) == shop.getCustomersWithMoreUndeliveredOrdersThanDelivered())
     }
 }

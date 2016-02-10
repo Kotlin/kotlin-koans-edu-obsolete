@@ -3,10 +3,12 @@ import org.junit.Test
 
 class TestMaxMin {
     @Test fun testCustomerWithMaximumNumberOfOrders() {
-        Assert.assertEquals(customers[reka], shop.getCustomerWithMaximumNumberOfOrders())
+        Assert.assertTrue(errorMessage("getCustomerWithMaximumNumberOfOrders"),
+                customers[reka] == shop.getCustomerWithMaximumNumberOfOrders())
     }
 
     @Test fun testTheMostExpensiveOrderedProduct() {
-        Assert.assertEquals(rubyMine, customers[nathan]!!.getMostExpensiveOrderedProduct())
+        Assert.assertTrue(errorMessage("getMostExpensiveOrderedProduct"),
+                rubyMine == customers[nathan]!!.getMostExpensiveOrderedProduct())
     }
 }

@@ -3,6 +3,6 @@ import org.junit.Assert
 
 class TestObjectExpressions {
     @Test fun testSort() {
-        Assert.assertEquals(listOf(5, 2, 1), getList())
+        Assert.assertEquals(errorMessage("getList"), listOf(5, 2, 1), getList())
     }
 }

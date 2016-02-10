@@ -3,6 +3,6 @@ import org.junit.Assert
 
 class TestSamConversions {
     @Test fun testSort() {
-        Assert.assertEquals(listOf(5, 2, 1), getList())
+        Assert.assertEquals(errorMessage("getList"), listOf(5, 2, 1), getList())
     }
 }

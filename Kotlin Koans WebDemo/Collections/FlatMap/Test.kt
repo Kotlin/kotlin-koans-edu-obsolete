@@ -3,10 +3,12 @@ import org.junit.Test
 
 class TestFlatMap {
     @Test fun testGetOrderedProductsSet() {
-        Assert.assertEquals(setOf(idea), customers[reka]!!.getOrderedProducts())
+        Assert.assertEquals(errorMessage("getOrderedProducts"),
+                setOf(idea) == customers[reka]!!.getOrderedProducts())
     }
 
     @Test fun testGetAllOrderedProducts() {
-        Assert.assertEquals(orderedProducts, shop.getAllOrderedProducts())
+        Assert.assertEquals(errorMessage("getAllOrderedProducts"),
+                orderedProducts == shop.getAllOrderedProducts())
     }
 }
