@@ -4,12 +4,12 @@ import koans.util.errorMessage
 
 class TestFlatMap {
     @Test fun testGetOrderedProductsSet() {
-        Assert.assertEquals(errorMessage("getOrderedProducts"),
+        Assert.assertTrue(errorMessage("getOrderedProducts"),
                 setOf(idea) == customers[reka]!!.getOrderedProducts())
     }
 
     @Test fun testGetAllOrderedProducts() {
-        Assert.assertEquals(errorMessage("getAllOrderedProducts"),
+        Assert.assertTrue(errorMessage("getAllOrderedProducts"),
                 orderedProducts == shop.getAllOrderedProducts())
     }
 }
