@@ -1,5 +1,6 @@
 import org.junit.Test
 import org.junit.Assert
+import koans.util.errorMessage
 
 class TestNamedArguments() {
 

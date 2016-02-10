@@ -3,6 +3,7 @@ package task10.tests
 import task10.*
 import org.junit.Assert
 import org.junit.Test
+import koans.util.errorMessage
 
 class TestFold {
     @Test fun testGetProductsOrderedByAllCustomers() {

@@ -1,6 +1,7 @@
 import org.junit.Assert
 import org.junit.Test
 import java.util.*
+import koans.util.errorMessage
 
 public class TestGenericFunctions {
     @Test fun testPartitionWordsAndLines() {

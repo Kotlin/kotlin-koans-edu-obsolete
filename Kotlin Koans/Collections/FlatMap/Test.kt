@@ -1,5 +1,6 @@
 import org.junit.Assert
 import org.junit.Test
+import koans.util.errorMessage
 
 class TestFlatMap {
     @Test fun testGetOrderedProductsSet() {

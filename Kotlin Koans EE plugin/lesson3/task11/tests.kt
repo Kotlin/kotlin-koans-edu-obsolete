@@ -3,6 +3,7 @@ package task11.tests
 import task11.*
 import org.junit.Assert
 import org.junit.Test
+import koans.util.errorMessage
 
 class K_Compound_Tasks {
 

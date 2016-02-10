@@ -3,6 +3,7 @@ package task12.tests
 import task12.*
 import org.junit.Test
 import org.junit.Assert
+import koans.util.errorMessage
 
 class TestSamConversions {
     @Test fun testSort() {

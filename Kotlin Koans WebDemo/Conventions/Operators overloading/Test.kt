@@ -1,6 +1,7 @@
 import org.junit.Assert
 import org.junit.Test
 import TimeInterval.*
+import koans.util.errorMessage
 
 class TestOperatorsOverloading {
     @Test fun testAddOneTimeInterval() {
