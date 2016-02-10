@@ -191,10 +191,10 @@
         "Task.kt" : {
           "placeholders" : [ {
             "line" : 3,
-            "start" : 32,
-            "length" : 50,
+            "start" : 31,
+            "length" : 52,
             "hint" : "",
-            "possible_answer" : "sortedDescending()"
+            "possible_answer" : ".sortedDescending()"
           } ],
           "name" : "Task.kt"
         }

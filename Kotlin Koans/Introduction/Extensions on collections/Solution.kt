@@ -1,3 +1,3 @@
 fun getList(): List<Int> {
-    return <answer>arrayListOf(1, 5, 2).<taskWindow>sortedDescending()</taskWindow></answer>
+    return <answer>arrayListOf(1, 5, 2)<taskWindow>.sortedDescending()</taskWindow></answer>
 }
