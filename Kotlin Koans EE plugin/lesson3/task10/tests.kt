@@ -3,7 +3,7 @@ package task10.tests
 import task10.*
 import org.junit.Assert
 import org.junit.Test
-import koans.util.errorMessage
+import koans.util.toMessage
 
 class TestFold {
     @Test fun testGetProductsOrderedByAllCustomers() {
@@ -17,7 +17,7 @@ class TestFold {
                         order(youTrack)
                 )
         )
-        Assert.assertTrue(errorMessage("getSetOfProductsOrderedByEveryCustomer"),
+        Assert.assertTrue("getSetOfProductsOrderedByEveryCustomer".toMessage(),
                 setOf(idea) == testShop.getSetOfProductsOrderedByEveryCustomer())
     }
 }

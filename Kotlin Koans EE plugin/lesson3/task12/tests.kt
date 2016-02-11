@@ -3,6 +3,7 @@ package task12.tests
 import task12.*
 import org.junit.Test
 import org.junit.Assert
+import koans.util.inEquals
 
 class TestExtensionsOnCollections {
     @Test fun testCollectionOfOneElement() {
@@ -22,7 +23,7 @@ class TestExtensionsOnCollections {
     }
 
     private fun doTest(expected: Collection<String>?, argument: Collection<String>) {
-        Assert.assertEquals("The function 'doSomethingStrangeWithCollection' should do at least something with a collection:",
+        Assert.assertEquals("The function 'doSomethingStrangeWithCollection' should do at least something with a collection".inEquals(),
                 expected, doSomethingStrangeWithCollection(argument))
     }
 }
