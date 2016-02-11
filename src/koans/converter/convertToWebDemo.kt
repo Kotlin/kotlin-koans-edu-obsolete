@@ -9,6 +9,7 @@ fun convertForWebDemo(parentDir: File, koansDir: File, links: Properties) {
     copyFolderAndTransformFiles(koansDir, parentDir) {
         fileName, fileText ->
         when (fileName) {
+            "koansTestUtil.kt" -> fileText.transformUtilFile(Mode.WEB_DEMO)
             "Solution.kt" -> fileText.removeTaskWindowTags()
             "Task.kt" -> fileText.removeTaskWindowTagsWithWhitespaces()
             "task.md" -> fileText.replaceLinks(linksMap)

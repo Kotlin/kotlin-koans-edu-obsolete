@@ -44,7 +44,7 @@ private fun copyUtilFile(parentDir: File, course: Course, filesMap: FilesMap) {
     val newUtilDir = parentDir.subFile(NEW_UTIL_DIR)
     newUtilDir.mkdir()
     val newUtilFile = newUtilDir.subFile(UTIL_FILE)
-    copyFileTaskAndTransform(utilFile, newUtilFile)
+    copyFileTaskAndTransform(utilFile, newUtilFile, { transformUtilFile(Mode.EDUCATIONAL_PLUGIN) })
 }
 
 private fun copyFileTaskAndTransform(oldFile: File, newFile: File, transform: String.() -> String = { this }) {

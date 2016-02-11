@@ -18,3 +18,7 @@ fun String.addPackageNameAndImportForTests(fileName: String, packageName: String
         ("import $packageName.*\n" + this).addPackageName(fileName, "$packageName.tests")
 
 fun String.isSourceCodeFileName() = CODE_FILE_EXTENSIONS.any { this.endsWith(it) }
+
+enum class Mode { WEB_DEMO, EDUCATIONAL_PLUGIN }
+
+fun String.transformUtilFile(mode: Mode) = replace("Mode.???", "Mode." + mode.name)
