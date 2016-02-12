@@ -10,10 +10,10 @@ fun convertForWebDemo(parentDir: File, koansDir: File, links: Properties) {
         fileName, fileText ->
         when (fileName) {
             "koansTestUtil.kt" -> fileText.transformUtilFile(Mode.WEB_DEMO)
-            "Solution.kt" -> fileText.removeTaskWindowTags()
-            "Task.kt" -> fileText.removeTaskWindowTagsWithWhitespaces()
+            "Solution.kt" -> fileText.removeTaskWindowTags().replaceImports()
+            "Task.kt" -> fileText.removeTaskWindowTagsWithWhitespaces().replaceImports()
             "task.md" -> fileText.replaceLinks(linksMap)
-            else -> fileText
+            else -> fileText.replaceImports()
         }
     }
 }
@@ -23,18 +23,21 @@ fun String.replaceLinks(links: Map<String, String>): String {
     return linksInThisString.fold(this) { text, link -> text.replace(link, links[link]!!) }
 }
 
+private fun String.replaceImports() = replaceImports(Mode.WEB_DEMO)
+
 fun copyFolderAndTransformFiles(from: File, to: File, transform: (String, String) -> String) {
 
     if (from.isDirectory && !to.exists()) to.mkdir()
 
     from.listFiles().forEach {
         file ->
+        val fileName = file.name.transformName(Mode.WEB_DEMO)
         when {
             file.shouldNotBeCopied() -> return@forEach
-            file.isDirectory -> copyFolderAndTransformFiles(file, to.subFile(file.name), transform)
-            else -> to.subFile(file.name).writeText(transform(file.name, file.readText()))
+            file.isDirectory -> copyFolderAndTransformFiles(file, to.subFile(fileName), transform)
+            else -> to.subFile(fileName).writeText(transform(fileName, file.readText()))
         }
     }
 }
 
-fun File.shouldNotBeCopied() = name == LINKS_PROPERTIES || name.endsWith(".java") || name == "task-ee.md"
+fun File.shouldNotBeCopied() = name == LINKS_PROPERTIES || name.contains("-ee")

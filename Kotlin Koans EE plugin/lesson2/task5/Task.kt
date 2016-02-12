@@ -1,6 +1,6 @@
 package task5
 
-import TimeInterval.*
+import task5.TimeInterval.*
 
 data class MyDate(val year: Int, val month: Int, val dayOfMonth: Int)
 

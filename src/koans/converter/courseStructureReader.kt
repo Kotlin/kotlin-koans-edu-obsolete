@@ -37,7 +37,8 @@ private fun readTask(taskDir: File, filesMap: FilesMap, commonLessonFiles: List<
         val lineNumber = range.line + 2 // 2 lines for import directive
         Placeholder(lineNumber, range.start, range.length, "", solution)
     }
-    val mainTaskFile = TaskFile(placeholders, taskFile.name)
+    fun newTaskFile(placeholders: List<Placeholder>, name: String) = TaskFile(placeholders, name.transformName(Mode.EDUCATIONAL_PLUGIN))
+    val mainTaskFile = newTaskFile(placeholders, taskFile.name)
     filesMap.record(mainTaskFile, taskFile)
 
     fun String.isOtherSourceFile(): Boolean {
@@ -45,11 +46,11 @@ private fun readTask(taskDir: File, filesMap: FilesMap, commonLessonFiles: List<
     }
     val otherTaskFiles = taskDir.filterSubDirectories { it.name.isOtherSourceFile() }.mapAndRecord(filesMap) {
         taskFile ->
-        TaskFile(listOf(), taskFile.name)
+        newTaskFile(listOf(), taskFile.name)
     }
     val commonTaskFiles = commonLessonFiles.mapAndRecord(filesMap) {
         commonFile ->
-        TaskFile(listOf(), commonFile.name)
+        newTaskFile(listOf(), commonFile.name)
     }
     val taskFiles = arrayListOf<TaskFile>() + mainTaskFile + otherTaskFiles + commonTaskFiles
     return Task(taskDir.name, taskFiles.associate { it.name to it })

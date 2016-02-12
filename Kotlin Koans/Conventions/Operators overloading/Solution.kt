@@ -1,4 +1,4 @@
-import TimeInterval.*
+import LOCAL.TimeInterval.*
 
 data class MyDate(val year: Int, val month: Int, val dayOfMonth: Int)
 

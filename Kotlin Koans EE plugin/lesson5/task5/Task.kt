@@ -1,6 +1,6 @@
 package task5
 
-import Answer.*
+import task5.Answer.*
 
 enum class Answer { a, b, c }
 
