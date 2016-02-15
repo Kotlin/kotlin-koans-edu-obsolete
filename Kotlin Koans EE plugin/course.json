@@ -6,7 +6,7 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 2,
+            "line" : 0,
             "start" : 22,
             "length" : 6,
             "hint" : "",
@@ -20,7 +20,7 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 2,
+            "line" : 0,
             "start" : 0,
             "length" : 56,
             "hint" : "",
@@ -38,7 +38,7 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 2,
+            "line" : 0,
             "start" : 68,
             "length" : 6,
             "hint" : "",
@@ -52,7 +52,7 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 2,
+            "line" : 0,
             "start" : 0,
             "length" : 56,
             "hint" : "",
@@ -66,7 +66,7 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 2,
+            "line" : 0,
             "start" : 74,
             "length" : 6,
             "hint" : "",
@@ -80,7 +80,7 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 4,
+            "line" : 2,
             "start" : 27,
             "length" : 6,
             "hint" : "",
@@ -94,7 +94,7 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 2,
+            "line" : 0,
             "start" : 0,
             "length" : 12,
             "hint" : "",
@@ -108,7 +108,7 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 5,
+            "line" : 3,
             "start" : 4,
             "length" : 6,
             "hint" : "",
@@ -122,13 +122,13 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 4,
+            "line" : 2,
             "start" : 22,
             "length" : 6,
             "hint" : "",
             "possible_answer" : "expr.value"
           }, {
-            "line" : 5,
+            "line" : 3,
             "start" : 22,
             "length" : 6,
             "hint" : "",
@@ -142,13 +142,13 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 2,
+            "line" : 0,
             "start" : 30,
             "length" : 6,
             "hint" : "",
             "possible_answer" : "RationalNumber(this, 1)"
           }, {
-            "line" : 3,
+            "line" : 1,
             "start" : 41,
             "length" : 6,
             "hint" : "",
@@ -162,7 +162,7 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 6,
+            "line" : 4,
             "start" : 32,
             "length" : 9,
             "hint" : "",
@@ -176,7 +176,7 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 6,
+            "line" : 4,
             "start" : 42,
             "length" : 6,
             "hint" : "",
@@ -190,7 +190,7 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 3,
+            "line" : 1,
             "start" : 31,
             "length" : 52,
             "hint" : "",
@@ -207,7 +207,7 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 3,
+            "line" : 1,
             "start" : 4,
             "length" : 10,
             "hint" : "",
@@ -221,7 +221,7 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 2,
+            "line" : 0,
             "start" : 60,
             "length" : 10,
             "hint" : "",
@@ -239,7 +239,7 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 2,
+            "line" : 0,
             "start" : 45,
             "length" : 6,
             "hint" : "",
@@ -257,7 +257,7 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 2,
+            "line" : 0,
             "start" : 0,
             "length" : 51,
             "hint" : "",
@@ -279,13 +279,13 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 8,
+            "line" : 6,
             "start" : 0,
             "length" : 69,
             "hint" : "",
             "possible_answer" : "\noperator fun MyDate.plus(timeInterval: TimeInterval) = addTimeIntervals(timeInterval, 1)\n\nclass RepeatedTimeInterval(val timeInterval: TimeInterval, val number: Int)\noperator fun TimeInterval.times(number: Int) = RepeatedTimeInterval(this, number)\n\noperator fun MyDate.plus(timeIntervals: RepeatedTimeInterval) = addTimeIntervals(timeIntervals.timeInterval, timeIntervals.number)\n"
           }, {
-            "line" : 15,
+            "line" : 13,
             "start" : 4,
             "length" : 64,
             "hint" : "",
@@ -303,7 +303,7 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 2,
+            "line" : 0,
             "start" : 0,
             "length" : 10,
             "hint" : "",
@@ -317,7 +317,7 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 6,
+            "line" : 4,
             "start" : 8,
             "length" : 6,
             "hint" : "",
@@ -334,7 +334,7 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 2,
+            "line" : 0,
             "start" : 46,
             "length" : 6,
             "hint" : "",
@@ -356,13 +356,13 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 3,
+            "line" : 1,
             "start" : 50,
             "length" : 6,
             "hint" : "",
             "possible_answer" : "customers.map { it.city }.toSet()"
           }, {
-            "line" : 6,
+            "line" : 4,
             "start" : 56,
             "length" : 6,
             "hint" : "",
@@ -384,25 +384,25 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 3,
+            "line" : 1,
             "start" : 57,
             "length" : 6,
             "hint" : "",
             "possible_answer" : "customers.all { it.city == city }"
           }, {
-            "line" : 6,
+            "line" : 4,
             "start" : 48,
             "length" : 6,
             "hint" : "",
             "possible_answer" : "customers.any { it.city == city }"
           }, {
-            "line" : 9,
+            "line" : 7,
             "start" : 47,
             "length" : 6,
             "hint" : "",
             "possible_answer" : "customers.count { it.city == city }"
           }, {
-            "line" : 12,
+            "line" : 10,
             "start" : 54,
             "length" : 6,
             "hint" : "",
@@ -424,13 +424,13 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 3,
+            "line" : 1,
             "start" : 50,
             "length" : 6,
             "hint" : "",
             "possible_answer" : "orders.flatMap { it.products }.toSet()"
           }, {
-            "line" : 6,
+            "line" : 4,
             "start" : 49,
             "length" : 6,
             "hint" : "",
@@ -452,13 +452,13 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 3,
+            "line" : 1,
             "start" : 61,
             "length" : 6,
             "hint" : "",
             "possible_answer" : "customers.maxBy { it.orders.size }"
           }, {
-            "line" : 6,
+            "line" : 4,
             "start" : 58,
             "length" : 6,
             "hint" : "",
@@ -480,7 +480,7 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 3,
+            "line" : 1,
             "start" : 64,
             "length" : 6,
             "hint" : "",
@@ -502,7 +502,7 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 4,
+            "line" : 2,
             "start" : 44,
             "length" : 6,
             "hint" : "",
@@ -524,7 +524,7 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 3,
+            "line" : 1,
             "start" : 61,
             "length" : 6,
             "hint" : "",
@@ -546,7 +546,7 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 3,
+            "line" : 1,
             "start" : 79,
             "length" : 6,
             "hint" : "",
@@ -568,7 +568,7 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 4,
+            "line" : 2,
             "start" : 4,
             "length" : 6,
             "hint" : "",
@@ -590,19 +590,19 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 5,
+            "line" : 3,
             "start" : 4,
             "length" : 6,
             "hint" : "",
             "possible_answer" : "return orders.filter { it.isDelivered }.flatMap { it.products }.maxBy { it.price }"
           }, {
-            "line" : 11,
+            "line" : 9,
             "start" : 4,
             "length" : 6,
             "hint" : "",
             "possible_answer" : "return customers.flatMap { it.getOrderedProductsList() }.count { it == product }"
           }, {
-            "line" : 14,
+            "line" : 12,
             "start" : 0,
             "length" : 10,
             "hint" : "",
@@ -624,19 +624,19 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 4,
+            "line" : 2,
             "start" : 52,
             "length" : 6,
             "hint" : "",
             "possible_answer" : "s.length"
           }, {
-            "line" : 6,
+            "line" : 4,
             "start" : 66,
             "length" : 6,
             "hint" : "",
             "possible_answer" : "group.size"
           }, {
-            "line" : 8,
+            "line" : 6,
             "start" : 56,
             "length" : 6,
             "hint" : "",
@@ -661,7 +661,7 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 5,
+            "line" : 3,
             "start" : 8,
             "length" : 3,
             "hint" : "",
@@ -675,13 +675,13 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 3,
+            "line" : 1,
             "start" : 4,
             "length" : 10,
             "hint" : "",
             "possible_answer" : "var value: Int? = null"
           }, {
-            "line" : 6,
+            "line" : 4,
             "start" : 12,
             "length" : 6,
             "hint" : "",
@@ -695,7 +695,7 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 3,
+            "line" : 1,
             "start" : 26,
             "length" : 6,
             "hint" : "",
@@ -709,13 +709,13 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 14,
+            "line" : 12,
             "start" : 8,
             "length" : 6,
             "hint" : "",
             "possible_answer" : "return timeInMillis!!.toDate()"
           }, {
-            "line" : 18,
+            "line" : 16,
             "start" : 8,
             "length" : 6,
             "hint" : "",
@@ -736,13 +736,13 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 3,
+            "line" : 1,
             "start" : 38,
             "length" : 6,
             "hint" : "",
             "possible_answer" : "this % 2 == 0"
           }, {
-            "line" : 4,
+            "line" : 2,
             "start" : 37,
             "length" : 6,
             "hint" : "",
@@ -756,7 +756,7 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 4,
+            "line" : 2,
             "start" : 0,
             "length" : 10,
             "hint" : "",
@@ -770,7 +770,7 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 2,
+            "line" : 0,
             "start" : 40,
             "length" : 6,
             "hint" : "",
@@ -784,13 +784,13 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 5,
+            "line" : 3,
             "start" : 15,
             "length" : 10,
             "hint" : "",
             "possible_answer" : "(color = getTitleColor())"
           }, {
-            "line" : 17,
+            "line" : 15,
             "start" : 12,
             "length" : 6,
             "hint" : "",
@@ -816,7 +816,7 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 7,
+            "line" : 5,
             "start" : 8,
             "length" : 42,
             "hint" : "",
@@ -833,7 +833,7 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 4,
+            "line" : 2,
             "start" : 0,
             "length" : 26,
             "hint" : "",

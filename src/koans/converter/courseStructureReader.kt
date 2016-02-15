@@ -34,7 +34,7 @@ private fun readTask(taskDir: File, filesMap: FilesMap, commonLessonFiles: List<
     val placeholders: List<Placeholder> = textRanges.zip(solutions).map {
         val (range, solution) = it
 
-        val lineNumber = range.line + 2 // 2 lines for import directive
+        val lineNumber = range.line //+ 2 // 2 lines for import directive
         Placeholder(lineNumber, range.start, range.length, "", solution)
     }
     fun newTaskFile(placeholders: List<Placeholder>, name: String) = TaskFile(placeholders, name.transformName(Mode.EDUCATIONAL_PLUGIN))
