@@ -1,5 +1,3 @@
-package task4
-
 import java.util.ArrayList
 
 open class Tag(val name: String) {

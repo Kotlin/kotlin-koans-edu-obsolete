@@ -16,29 +16,22 @@ fun convertTasks(parentDir: File, course: Course, filesMap: FilesMap, links: Pro
             val taskDir = lessonDir.subFile(taskDirName)
             taskDir.mkdir()
 
-            fun copyFileTaskAndTransform(oldFile: File, newFileName: String, transform: String.() -> String) {
+            fun copyFileTaskAndTransform(oldFile: File, newFileName: String, transform: String.() -> String = { this }) {
                 val newFile = taskDir.subFile(newFileName)
                 copyFileTaskAndTransform(oldFile, newFile, transform)
             }
 
-            fun String.replaceImports() = replaceImports(Mode.EDUCATIONAL_PLUGIN, taskDirName)
-
             val taskDirectory = filesMap[task]
-            val packageName = "$taskDirName"
 
             val taskInMD = taskDirectory.subFile(TASK_EE_MD).let { if (it.exists()) it else taskDirectory.subFile(TASK_MD) }
             copyFileTaskAndTransform(taskInMD, TASK_HTML) { convertMarkdownToHtml(this, links) }
 
-            copyFileTaskAndTransform(taskDirectory.subFile(TEST_KT), TESTS_KT) {
-                addPackageNameAndImportForTests(TEST_KT, packageName).replaceImports()
-            }
+            copyFileTaskAndTransform(taskDirectory.subFile(TEST_KT), TESTS_KT)
 
             for ((name, taskFile) in task.task_files) {
 
                 copyFileTaskAndTransform(filesMap[taskFile], filesMap[taskFile].name.transformName(Mode.EDUCATIONAL_PLUGIN)) {
-                    (if (taskFile.placeholders.isEmpty()) this else removeTaskWindowTags())
-                            .addPackageName(taskFile.name, packageName)
-                            .replaceImports()
+                    if (taskFile.placeholders.isEmpty()) this else removeTaskWindowTags()
                 }
             }
         }

@@ -1,6 +1,3 @@
-package task7.tests
-
-import task7.*
 import org.junit.Assert
 import org.junit.Test
 import koans.util.inEquals

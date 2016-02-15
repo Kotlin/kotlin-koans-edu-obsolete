@@ -1,5 +1,3 @@
-package task4
-
 // Return all products this customer has ordered
 fun Customer.getOrderedProducts(): Set<Product> = TODO()
 

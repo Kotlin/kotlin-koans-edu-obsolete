@@ -1,5 +1,3 @@
-package task1
-
 fun task(): List<Boolean> {
     val isEven: Int.() -> Boolean = { TODO() }
     val isOdd: Int.() -> Boolean = { TODO() }

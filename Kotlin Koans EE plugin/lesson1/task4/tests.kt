@@ -1,6 +1,3 @@
-package task4.tests
-
-import task4.*
 import org.junit.Test
 import org.junit.Assert
 

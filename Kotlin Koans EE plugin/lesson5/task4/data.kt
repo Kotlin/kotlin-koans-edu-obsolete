@@ -1,5 +1,3 @@
-package task4
-
 data class Product(val description: String, val price: Double, val popularity: Int)
 
 val cactus = Product("cactus", 11.2, 13)

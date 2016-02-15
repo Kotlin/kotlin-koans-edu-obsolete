@@ -1,5 +1,3 @@
-package task7
-
 class Person
 
 fun getPeople(): List<Person> {

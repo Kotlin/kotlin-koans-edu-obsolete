@@ -1,5 +1,3 @@
-package task8
-
 fun sendMessageToClient(
         client: Client?, message: String?, mailer: Mailer
 ){

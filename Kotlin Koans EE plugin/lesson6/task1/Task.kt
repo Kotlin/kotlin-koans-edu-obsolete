@@ -1,5 +1,3 @@
-package task1
-
 import java.util.*
 
 fun partitionTo() = TODO()

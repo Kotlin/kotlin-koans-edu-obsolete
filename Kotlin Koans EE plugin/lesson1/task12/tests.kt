@@ -1,6 +1,3 @@
-package task12.tests
-
-import task12.*
 import org.junit.Test
 import org.junit.Assert
 import koans.util.toMessageInEquals

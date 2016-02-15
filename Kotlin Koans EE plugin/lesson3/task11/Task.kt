@@ -1,5 +1,3 @@
-package task11
-
 // Return the most expensive product among all delivered products
 // (use the Order.isDelivered flag)
 fun Customer.getMostExpensiveDeliveredProduct(): Product? {

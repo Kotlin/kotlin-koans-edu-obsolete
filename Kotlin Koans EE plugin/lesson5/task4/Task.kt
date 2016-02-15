@@ -1,5 +1,3 @@
-package task4
-
 fun renderProductTable(): String {
     return html {
         table {

@@ -1,5 +1,3 @@
-package task4
-
 import java.util.Calendar
 
 fun MyDate.nextDay() = addTimeIntervals(TimeInterval.DAY, 1)

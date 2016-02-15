@@ -1,6 +1,3 @@
-package task9.tests
-
-import task9.*
 import org.junit.Test
 import org.junit.Assert
 

@@ -1,5 +1,3 @@
-package task12
-
 data class Shop(val name: String, val customers: List<Customer>)
 
 data class Customer(val name: String, val city: City, val orders: List<Order>) {

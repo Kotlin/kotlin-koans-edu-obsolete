@@ -1,6 +1,3 @@
-package task13.tests
-
-import task13.*
 import org.junit.Test
 import org.junit.Assert
 

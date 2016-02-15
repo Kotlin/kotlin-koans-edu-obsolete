@@ -1,5 +1,3 @@
-package task3
-
 // Return true if all customers are from the given city
 fun Shop.checkAllCustomersAreFrom(city: City): Boolean = TODO()
 

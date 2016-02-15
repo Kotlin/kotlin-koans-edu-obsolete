@@ -1,5 +1,3 @@
-package task12
-
 fun doSomethingStrangeWithCollection(collection: Collection<String>): Collection<String>? {
 
     val groupsByLength = collection. groupBy { s -> TODO() }

@@ -1,6 +1,3 @@
-package task3.tests
-
-import task3.*
 import org.junit.Assert
 import org.junit.Test
 import koans.util.toMessage

@@ -10,10 +10,10 @@ fun convertForWebDemo(parentDir: File, koansDir: File, links: Properties) {
         fileName, fileText ->
         when (fileName) {
             "koansTestUtil.kt" -> fileText.transformUtilFile(Mode.WEB_DEMO)
-            "Solution.kt" -> fileText.removeTaskWindowTags().replaceImports()
-            "Task.kt" -> fileText.removeTaskWindowTagsWithWhitespaces().replaceImports()
+            "Solution.kt" -> fileText.removeTaskWindowTags()
+            "Task.kt" -> fileText.removeTaskWindowTagsWithWhitespaces()
             "task.md" -> fileText.replaceLinks(linksMap)
-            else -> fileText.replaceImports()
+            else -> fileText
         }
     }
 }
@@ -22,8 +22,6 @@ fun String.replaceLinks(links: Map<String, String>): String {
     val linksInThisString = links.filterKeys { this.contains(it) }.keys
     return linksInThisString.fold(this) { text, link -> text.replace(link, links[link]!!) }
 }
-
-private fun String.replaceImports() = replaceImports(Mode.WEB_DEMO)
 
 fun copyFolderAndTransformFiles(from: File, to: File, transform: (String, String) -> String) {
 

@@ -1,5 +1,3 @@
-package task2
-
 import java.util.HashMap
 
 /* TODO */

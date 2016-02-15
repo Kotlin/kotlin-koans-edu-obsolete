@@ -1,5 +1,3 @@
-package task9
-
 fun eval(expr: Expr): Int =
         when (expr) {
             is Num -> TODO()

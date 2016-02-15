@@ -1,4 +1,4 @@
-import LOCAL.Answer.*
+import Answer.*
 
 enum class Answer { a, b, c }
 

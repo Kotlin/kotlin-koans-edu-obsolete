@@ -1,5 +1,3 @@
-package task1
-
 data class MyDate(val year: Int, val month: Int, val dayOfMonth: Int) : Comparable<MyDate> {
     /* TODO */
 }

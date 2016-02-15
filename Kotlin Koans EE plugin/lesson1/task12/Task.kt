@@ -1,5 +1,3 @@
-package task12
-
 import java.util.*
 
 fun getList(): List<Int> {

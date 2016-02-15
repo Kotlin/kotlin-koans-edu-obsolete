@@ -1,5 +1,3 @@
-package task6
-
 //products
 val idea = Product("IntelliJ IDEA Ultimate", 199.0)
 val reSharper = Product("ReSharper", 149.0)

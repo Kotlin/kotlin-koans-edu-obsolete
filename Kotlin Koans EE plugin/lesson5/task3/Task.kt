@@ -1,5 +1,3 @@
-package task3
-
 fun <T> T.myApply(f: T.() -> Unit): T { TODO() }
 
 fun createString(): String {
