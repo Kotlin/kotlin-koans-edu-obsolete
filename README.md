@@ -1,4 +1,4 @@
-# KoansConverter
+# kotlin-koans-edu
 
 This project stores the tasks that are used both for Educational Plugin and WebDemo. 
 Aslo, it converts the task files to different required formats.
