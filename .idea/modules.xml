@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/KoansConverter.iml" filepath="$PROJECT_DIR$/KoansConverter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kotlin-koans-edu.iml" filepath="$PROJECT_DIR$/kotlin-koans-edu.iml" />
     </modules>
   </component>
 </project>
