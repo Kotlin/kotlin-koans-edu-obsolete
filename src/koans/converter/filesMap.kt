@@ -13,7 +13,7 @@ class FilesMap {
     operator fun get(task: Task) = taskDirs[task] ?: error(task)
     operator fun get(taskFile: TaskFile) = taskFiles[taskFile] ?: error(taskFile)
 
-    private fun error(element: Any?) = throw IllegalArgumentException("No file for $element")
+    private fun error(element: Any?): Nothing = throw IllegalArgumentException("No file for $element")
 
     fun record(element: Any?, file: File) {
         when (element) {
