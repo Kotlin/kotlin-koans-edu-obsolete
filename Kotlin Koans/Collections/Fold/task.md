@@ -1,6 +1,6 @@
 ## Fold
 
-Implement `Shop.getProductsOrderedByAllCustomers()` using
+Implement `Shop.getSetOfProductsOrderedByEveryCustomer()` using
 [`fold`](fold).
 
 ```kotlin
