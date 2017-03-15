@@ -49,9 +49,9 @@
 <p><strong>which of the following is true:</strong></p>
 <p>a. this code doesn't compile</p>
 <p>b. <code>this</code> refers to an instance of an outer class</p>
-<p>c. <code>this</code> refers to a receiver parameter TR of the function literal:</p><pre><code data-lang="text/x-kotlin">tr (color = &quot;yellow&quot;) { TR.(): Unit -&gt;
-      this.td {
-          text(&quot;Product&quot;)
-      }
+<p>c. <code>this</code> refers to a receiver parameter TR of the function literal:</p><pre><code data-lang="text/x-kotlin">tr (color = &quot;yellow&quot;) {
+    this@tr.td {
+        text(&quot;Product&quot;)
+    }
 }
 </code></pre>
