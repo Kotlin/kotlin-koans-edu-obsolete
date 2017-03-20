@@ -1,5 +1,9 @@
 // Return all products this customer has ordered
-fun Customer.getOrderedProducts(): Set<Product> = TODO()
+val Customer.orderedProducts: Set<Product> get() {
+    TODO()
+}
 
 // Return all products that were ordered by at least one customer
-fun Shop.getAllOrderedProducts(): Set<Product> = TODO()
+val Shop.allOrderedProducts: Set<Product> get() {
+    TODO()
+}

@@ -1,3 +1,7 @@
-fun Customer.getOrderedProducts(): Set<Product> = <taskWindow>orders.flatMap { it.products }.toSet()</taskWindow>
+val Customer.orderedProducts: Set<Product> get() {
+    <taskWindow>return orders.flatMap { it.products }.toSet()</taskWindow>
+}
 
-fun Shop.getAllOrderedProducts(): Set<Product> = <taskWindow>customers.flatMap { it.getOrderedProducts() }.toSet()</taskWindow>
+val Shop.allOrderedProducts: Set<Product> get() {
+    <taskWindow>return customers.flatMap { it.orderedProducts }.toSet()</taskWindow>
+}

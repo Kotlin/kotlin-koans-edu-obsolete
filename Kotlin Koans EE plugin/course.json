@@ -424,17 +424,17 @@
       "task_files" : {
         "Task.kt" : {
           "placeholders" : [ {
-            "line" : 1,
-            "start" : 50,
+            "line" : 2,
+            "start" : 4,
             "length" : 6,
             "hint" : "",
-            "possible_answer" : "orders.flatMap { it.products }.toSet()"
+            "possible_answer" : "return orders.flatMap { it.products }.toSet()"
           }, {
-            "line" : 4,
-            "start" : 49,
+            "line" : 7,
+            "start" : 4,
             "length" : 6,
             "hint" : "",
-            "possible_answer" : "customers.flatMap { it.getOrderedProducts() }.toSet()"
+            "possible_answer" : "return customers.flatMap { it.orderedProducts }.toSet()"
           } ],
           "name" : "Task.kt"
         },
