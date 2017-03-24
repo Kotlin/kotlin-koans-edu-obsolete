@@ -1,3 +1,5 @@
+package introduction.object_expressions
+
 import org.junit.Test
 import org.junit.Assert
 import koans.util.toMessageInEquals

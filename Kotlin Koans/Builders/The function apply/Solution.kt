@@ -1,4 +1,6 @@
-<answer>fun <T> T.myApply(f: T.() -> Unit): T { <taskWindow>f(); return this</taskWindow> }</answer>
+package builders.the_function_apply
+
+/*<answer>*/fun <T> T.myApply(f: T.() -> Unit): T { /*<taskWindow>*/f(); return this/*</taskWindow>*/ }/*</answer>*/
 
 fun createString(): String {
     return StringBuilder().myApply {

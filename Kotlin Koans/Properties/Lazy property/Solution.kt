@@ -1,10 +1,12 @@
-<answer>class LazyProperty(val initializer: () -> Int) {
-    <taskWindow>var value: Int? = null</taskWindow>
+package properties.lazy_property
+
+/*<answer>*/class LazyProperty(val initializer: () -> Int) {
+    /*<taskWindow>*/var value: Int? = null/*</taskWindow>*/
     val lazy: Int
         get() {
-            <taskWindow>if (value == null) {
+            /*<taskWindow>*/if (value == null) {
                 value = initializer()
             }
-            return value!!</taskWindow>
+            return value!!/*</taskWindow>*/
         }
-}</answer>
+}/*</answer>*/

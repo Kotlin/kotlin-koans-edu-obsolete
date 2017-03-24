@@ -1,6 +1,9 @@
+package collections.fold
+
 import org.junit.Assert
 import org.junit.Test
 import koans.util.toMessage
+import collections.*
 
 class TestFold {
     @Test fun testGetProductsOrderedByAllCustomers() {

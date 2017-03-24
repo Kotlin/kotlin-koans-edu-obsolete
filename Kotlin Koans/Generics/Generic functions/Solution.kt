@@ -1,6 +1,8 @@
+package generics.generic_functions
+
 import java.util.*
 
-<answer><taskWindow>fun <T, C: MutableCollection<T>> Collection<T>.partitionTo(first: C, second: C, predicate: (T) -> Boolean): Pair<C, C> {
+/*<answer><taskWindow>*/fun <T, C: MutableCollection<T>> Collection<T>.partitionTo(first: C, second: C, predicate: (T) -> Boolean): Pair<C, C> {
     for (element in this) {
         if (predicate(element)) {
             first.add(element)
@@ -9,7 +11,7 @@ import java.util.*
         }
     }
     return Pair(first, second)
-}</taskWindow></answer>
+}/*</taskWindow></answer>*/
 
 fun partitionWordsAndLines() {
     val (words, lines) = listOf("a", "a b", "c", "d e").

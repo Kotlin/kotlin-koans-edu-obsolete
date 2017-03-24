@@ -1,3 +1,5 @@
+package collections.get_used_to_new_style
+
 import org.junit.Test
 import org.junit.Assert
 import koans.util.inEquals

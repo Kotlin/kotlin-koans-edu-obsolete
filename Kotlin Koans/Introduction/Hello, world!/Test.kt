@@ -1,3 +1,5 @@
+package introduction.hello_world
+
 import org.junit.Assert
 import org.junit.Test
 

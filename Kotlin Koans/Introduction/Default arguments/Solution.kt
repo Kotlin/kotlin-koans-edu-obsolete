@@ -1,5 +1,7 @@
-<answer><taskWindow>fun foo(name: String, number: Int = 42, toUpperCase: Boolean = false)</taskWindow> =
-        (if (toUpperCase) name.toUpperCase() else name) + number</answer>
+package introduction.default_arguments
+
+/*<answer><taskWindow>*/fun foo(name: String, number: Int = 42, toUpperCase: Boolean = false)/*</taskWindow>*/ =
+        (if (toUpperCase) name.toUpperCase() else name) + number/*</answer>*/
 
 fun useFoo() = listOf(
         foo("a"),

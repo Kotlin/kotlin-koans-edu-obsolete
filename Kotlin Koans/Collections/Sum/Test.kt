@@ -1,6 +1,9 @@
+package collections.sum
+
 import org.junit.Assert
 import org.junit.Test
 import koans.util.toMessage
+import collections.*
 
 class TestSum {
     @Test fun testGetTotalOrderPrice() {

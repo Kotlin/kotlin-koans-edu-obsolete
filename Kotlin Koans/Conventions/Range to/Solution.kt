@@ -1,4 +1,6 @@
-<answer>operator fun MyDate.rangeTo(other: MyDate) = <taskWindow>DateRange(this, other)</taskWindow></answer>
+package conventions.range_to
+
+/*<answer>*/operator fun MyDate.rangeTo(other: MyDate) = /*<taskWindow>*/DateRange(this, other)/*</taskWindow></answer>*/
 
 class DateRange(override val start: MyDate, override val endInclusive: MyDate): ClosedRange<MyDate>
 

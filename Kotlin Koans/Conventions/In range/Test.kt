@@ -1,3 +1,5 @@
+package conventions.in_range
+
 import org.junit.Assert
 import org.junit.Test
 import koans.util.inEquals

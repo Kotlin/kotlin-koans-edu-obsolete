@@ -1,3 +1,5 @@
+package introduction.extension_functions
+
 import org.junit.Test
 import org.junit.Assert
 

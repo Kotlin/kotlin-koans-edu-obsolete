@@ -1,4 +1,6 @@
-<taskWindow>fun toJSON(collection: Collection<Int>): String {
+package introduction.java_to_kotlin_conversion
+
+/*<taskWindow>*/fun toJSON(collection: Collection<Int>): String {
     val sb = StringBuilder()
     sb.append("[")
     val iterator = collection.iterator()
@@ -13,4 +15,4 @@
     }
     sb.append("]")
     return sb.toString()
-}</taskWindow>
+}/*</taskWindow>*/

@@ -1,3 +1,5 @@
+package properties.delegates_examples
+
 import org.junit.Assert
 import org.junit.Test
 import java.util.HashMap

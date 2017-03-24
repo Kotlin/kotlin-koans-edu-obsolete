@@ -1,10 +1,12 @@
-<answer>class Invokable {
+package conventions.invoke
+
+/*<answer>*/class Invokable {
     var numberOfInvocations: Int = 0
         private set
     operator fun invoke(): Invokable {
-        <taskWindow>numberOfInvocations++
-        return this</taskWindow>
+        /*<taskWindow>*/numberOfInvocations++
+        return this/*</taskWindow>*/
     }
-}</answer>
+}/*</answer>*/
 
 fun invokeTwice(invokable: Invokable) = invokable()()

@@ -1,9 +1,11 @@
-<answer>fun eval(expr: Expr): Int =
+package introduction.smart_casts
+
+/*<answer>*/fun eval(expr: Expr): Int =
         when (expr) {
-            is Num -> <taskWindow>expr.value</taskWindow>
-            is Sum -> <taskWindow>eval(expr.left) + eval(expr.right)</taskWindow>
+            is Num -> /*<taskWindow>*/expr.value/*</taskWindow>*/
+            is Sum -> /*<taskWindow>*/eval(expr.left) + eval(expr.right)/*</taskWindow>*/
             else -> throw IllegalArgumentException("Unknown expression")
-        }</answer>
+        }/*</answer>*/
 
 interface Expr
 class Num(val value: Int) : Expr

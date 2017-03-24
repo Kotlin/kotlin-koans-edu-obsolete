@@ -1,6 +1,9 @@
+package collections.max_min
+
 import org.junit.Assert
 import org.junit.Test
 import koans.util.toMessage
+import collections.*
 
 class TestMaxMin {
     @Test fun testCustomerWithMaximumNumberOfOrders() {

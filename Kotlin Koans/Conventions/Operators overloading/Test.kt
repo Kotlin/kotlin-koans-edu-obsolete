@@ -1,3 +1,5 @@
+package conventions.operators_overloading
+
 import org.junit.Assert
 import org.junit.Test
 import koans.util.toMessageInEquals

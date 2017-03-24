@@ -1,3 +1,5 @@
+package introduction.extensions_on_collections
+
 import org.junit.Test
 import org.junit.Assert
 

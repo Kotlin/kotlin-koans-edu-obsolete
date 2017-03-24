@@ -1,1 +1,3 @@
-fun start(): String = <taskWindow>"OK"</taskWindow>
+package introduction.hello_world
+
+fun start(): String = /*<taskWindow>*/"OK"/*</taskWindow>*/

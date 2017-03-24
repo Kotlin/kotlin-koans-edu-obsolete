@@ -1,3 +1,5 @@
+package builders.string_and_map_builders
+
 import org.junit.Assert
 import org.junit.Test
 import koans.util.inEquals

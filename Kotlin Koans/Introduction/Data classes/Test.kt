@@ -1,3 +1,5 @@
+package introduction.data_classes
+
 import org.junit.Test
 import org.junit.Assert
 

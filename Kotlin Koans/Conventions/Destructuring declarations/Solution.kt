@@ -1,4 +1,6 @@
-<answer><taskWindow>data </taskWindow>class MyDate(val year: Int, val month: Int, val dayOfMonth: Int)</answer>
+package conventions.destructuring_declarations
+
+/*<answer><taskWindow>*/data /*</taskWindow>*/class MyDate(val year: Int, val month: Int, val dayOfMonth: Int)/*</answer>*/
 
 fun isLeapDay(date: MyDate): Boolean {
 

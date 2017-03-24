@@ -1,6 +1,9 @@
+package collections.all_any_and_other_predicates
+
 import org.junit.Assert
 import org.junit.Test
 import koans.util.toMessage
+import collections.*
 
 class TestAllAnyAndOtherPredicates {
 

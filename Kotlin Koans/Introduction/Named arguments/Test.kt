@@ -1,3 +1,5 @@
+package introduction.named_arguments
+
 import org.junit.Test
 import org.junit.Assert
 import koans.util.toMessageInEquals

@@ -1,7 +1,9 @@
-<answer>fun renderProductTable(): String {
+package builders.html_builders
+
+/*<answer>*/fun renderProductTable(): String {
     return html {
         table {
-            tr <taskWindow>(color = getTitleColor())</taskWindow> {
+            tr /*<taskWindow>*/(color = getTitleColor())/*</taskWindow>*/ {
                 td {
                     text("Product")
                 }
@@ -13,7 +15,7 @@
                 }
             }
             val products = getProducts()
-            <taskWindow>for ((index, product) in products.withIndex()) {
+            /*<taskWindow>*/for ((index, product) in products.withIndex()) {
                 tr {
                     td (color = getCellColor(index, 0)) {
                         text(product.description)
@@ -25,10 +27,10 @@
                         text(product.popularity)
                     }
                 }
-            }</taskWindow>
+            }/*</taskWindow>*/
         }
     }.toString()
-}</answer>
+}/*</answer>*/
 
 fun getTitleColor() = "#b9c9fe"
 fun getCellColor(row: Int, column: Int) = if ((row + column) %2 == 0) "#dce4ff" else "#eff2ff"

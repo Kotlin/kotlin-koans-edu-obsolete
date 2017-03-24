@@ -1,6 +1,9 @@
+package collections.flatmap
+
 import org.junit.Assert
 import org.junit.Test
 import koans.util.toMessage
+import collections.*
 
 class TestFlatMap {
     @Test fun testGetOrderedProductsSet() {

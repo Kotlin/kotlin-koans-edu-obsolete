@@ -1,3 +1,5 @@
+package properties.delegates_how_it_works
+
 import java.util.Calendar
 
 data class MyDate(val year: Int, val month: Int, val dayOfMonth: Int)

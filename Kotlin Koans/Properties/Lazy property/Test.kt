@@ -1,3 +1,5 @@
+package properties.lazy_property
+
 import org.junit.Assert
 import org.junit.Test
 

@@ -1,3 +1,5 @@
+package introduction.lambdas
+
 import org.junit.Test
 import org.junit.Assert
 

@@ -1,5 +1,9 @@
+package collections.filter_map
+
+import collections.*
+
 fun Shop.getCitiesCustomersAreFrom(): Set<City> =
-    <taskWindow>customers.map { it.city }.toSet()</taskWindow>
+    /*<taskWindow>*/customers.map { it.city }.toSet()/*</taskWindow>*/
 
 fun Shop.getCustomersFrom(city: City): List<Customer> =
-    <taskWindow>customers.filter { it.city == city }</taskWindow>
+    /*<taskWindow>*/customers.filter { it.city == city }/*</taskWindow>*/

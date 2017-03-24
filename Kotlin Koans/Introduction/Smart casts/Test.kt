@@ -1,3 +1,5 @@
+package introduction.smart_casts
+
 import org.junit.Test
 import org.junit.Assert
 

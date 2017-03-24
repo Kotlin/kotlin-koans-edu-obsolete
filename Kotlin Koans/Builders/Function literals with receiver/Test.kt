@@ -1,3 +1,5 @@
+package builders.function_literals_with_receiver
+
 import org.junit.Assert
 import org.junit.Test
 import koans.util.inEquals

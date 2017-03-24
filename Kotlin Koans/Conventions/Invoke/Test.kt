@@ -1,3 +1,5 @@
+package conventions.invoke
+
 import org.junit.Assert
 import org.junit.Test
 import koans.util.inEquals

@@ -1,6 +1,9 @@
+package collections.compound_tasks
+
 import org.junit.Assert
 import org.junit.Test
 import koans.util.toMessage
+import collections.*
 
 class K_Compound_Tasks {
 

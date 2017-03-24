@@ -1,3 +1,5 @@
+package conventions.destructuring_declarations
+
 import org.junit.Assert
 import org.junit.Test
 

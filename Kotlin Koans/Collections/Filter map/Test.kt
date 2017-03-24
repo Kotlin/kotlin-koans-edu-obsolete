@@ -1,6 +1,9 @@
+package collections.filter_map
+
 import org.junit.Assert
 import org.junit.Test
 import koans.util.toMessage
+import collections.*
 
 class TestFilterMap {
     @Test fun testCitiesCustomersAreFrom() {

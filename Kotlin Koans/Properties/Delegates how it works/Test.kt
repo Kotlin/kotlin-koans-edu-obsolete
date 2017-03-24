@@ -1,3 +1,5 @@
+package properties.delegates_how_it_works
+
 import org.junit.Assert
 import org.junit.Test
 

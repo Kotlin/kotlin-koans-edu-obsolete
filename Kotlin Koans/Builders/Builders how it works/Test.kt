@@ -1,6 +1,8 @@
+package builders.builders_how_it_works
+
 import org.junit.Test
 import org.junit.Assert
-import Answer.*
+import builders.builders_how_it_works.Answer.*
 
 class TestBuildersHowItWorks {
     @Test fun testBuildersQuiz() {

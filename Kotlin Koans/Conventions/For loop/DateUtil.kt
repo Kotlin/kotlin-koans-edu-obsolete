@@ -1,3 +1,5 @@
+package conventions.for_loop
+
 import java.util.Calendar
 
 fun MyDate.nextDay() = addTimeIntervals(TimeInterval.DAY, 1)
