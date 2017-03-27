@@ -6,5 +6,5 @@ fun String.toMessageInEquals() = toMessage().inEquals()
 
 fun String.inEquals() = this + ":" + if (mode == Mode.WEB_DEMO) " " else "<br><br>"
 
-private enum class Mode { WEB_DEMO, EDUCATIONAL_PLUGIN }
+private enum class Mode { WEB_DEMO, EDUCATIONAL_PLUGIN, UNDEFINED }
 private val mode = Mode.EDUCATIONAL_PLUGIN

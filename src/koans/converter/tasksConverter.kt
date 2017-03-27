@@ -47,5 +47,11 @@ private fun copyUtilFile(parentDir: File, course: Course, filesMap: FilesMap) {
 }
 
 private fun copyFileTaskAndTransform(oldFile: File, newFile: File, transform: String.() -> String = { this }) {
+    copyFileAndTransform(oldFile, newFile) {
+        (if (oldFile.name.isSourceCodeFileName()) removePackageDeclarations() else this).transform()
+    }
+}
+
+private fun copyFileAndTransform(oldFile: File, newFile: File, transform: String.() -> String = { this }) {
     newFile.writeText(oldFile.readText().transform())
 }

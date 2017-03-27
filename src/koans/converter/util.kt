@@ -21,12 +21,40 @@ fun String.isSourceCodeFileName() = CODE_FILE_EXTENSIONS.any { this.endsWith(it)
 
 enum class Mode { WEB_DEMO, EDUCATIONAL_PLUGIN }
 
-fun String.transformUtilFile(mode: Mode) = replace("Mode.???", "Mode." + mode.name)
+fun String.transformUtilFile(mode: Mode) = replace("Mode.UNDEFINED", "Mode." + mode.name)
 
-fun String.transformName(mode: Mode): String {
+fun String.transformName(mode: Mode) = transformExtension().removeModeSuffix(mode)
+
+private fun String.transformExtension() = when {
+    endsWith(".kt_") -> replace(".kt_", ".kt")
+    endsWith(".java_") -> replace(".java_", ".java")
+    else -> this
+}
+
+private fun String.removeModeSuffix(mode: Mode): String {
     val suffix = if (mode == Mode.WEB_DEMO) "-wb" else "-ee"
     return if (contains(suffix)) replace(suffix, "") else this
 }
 
 fun String.replaceImports(mode: Mode, taskName: String = "") =
         replace("import LOCAL.", if (mode == Mode.WEB_DEMO) "import " else "import $taskName.")
+
+fun String.removePackageDeclarations(): String {
+    val lines = split("\n")
+    if (lines.size < 2) return this
+
+    val packageDirective = lines[0]
+    if (!packageDirective.startsWith("package ")) return this
+
+    val packageName = packageDirective.substringAfter("package ")
+    if (packageName in VALID_PACKAGES) return this
+    // used in collections in 'kotlin koans'
+    val subPackageName = packageName.substringBeforeLast(".")
+
+    return lines.subList(2, lines.size).joinToString("\n")
+            .replace("import $packageName.*\n", "")
+            .replace("import $subPackageName.*\n", "")
+            .replace("import $packageName.", "import ")
+            .replace("import $subPackageName.", "import ")
+            .trimStart()
+}

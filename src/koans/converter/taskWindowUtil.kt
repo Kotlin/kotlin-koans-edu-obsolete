@@ -10,6 +10,11 @@ private val CLOSED = "</$TASK_WINDOW>"
 private val TODO = "/* TODO */"
 private val EMPTY_TASK_WINDOW = "$OPEN$TODO$CLOSED"
 
+fun String.uncommentTags(): String {
+    val tags = listOf(OPEN, CLOSED, "<answer>$OPEN", "$CLOSED</answer>", "<answer>", "</answer>")
+    return tags.fold(this) { result, tag -> result.replace("/*$tag*/", tag)}
+}
+
 fun String.getTaskWindowsFromText(): List<TextRange> {
     val textRanges = ArrayList<TextRange>()
     for ((index, initialLine) in lines().withIndex()) {
@@ -30,5 +35,5 @@ fun String.removeTaskWindowTags() = replace(EMPTY_TASK_WINDOW, TODO).replace(OPE
 fun String.removeTaskWindowTagsWithWhitespaces() = replace(EMPTY_TASK_WINDOW, "")
 
 fun String.getSolutionsInTaskWindows(): List<String> {
-    return split(OPEN).filter { it.contains(CLOSED) }.map { it.split(CLOSED).first() }
+    return split(OPEN).filter { it.contains(CLOSED) }.map { it.substringBefore(CLOSED) }
 }

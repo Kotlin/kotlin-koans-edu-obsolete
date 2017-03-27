@@ -10,10 +10,10 @@ fun convertForWebDemo(parentDir: File, koansDir: File, links: Properties) {
         fileName, fileText ->
         when (fileName) {
             "koansTestUtil.kt" -> fileText.transformUtilFile(Mode.WEB_DEMO)
-            "Solution.kt" -> fileText.removeTaskWindowTags()
+            "Solution.kt" -> fileText.uncommentTags().removeTaskWindowTags().removePackageDeclarations()
             "Task.kt" -> fileText.removeTaskWindowTagsWithWhitespaces()
             "task.md" -> fileText.replaceLinks(linksMap)
-            else -> fileText
+            else -> if (fileName.isSourceCodeFileName()) fileText.removePackageDeclarations() else fileText
         }
     }
 }

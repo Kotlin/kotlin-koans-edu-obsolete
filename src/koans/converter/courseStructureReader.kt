@@ -26,10 +26,10 @@ fun readCourse(koansDir: File, filesMap: FilesMap): Course {
 
 private fun readTask(taskDir: File, filesMap: FilesMap, commonLessonFiles: List<File>): Task {
     val solutionFile = taskDir.subFile(SOLUTION_KT)
-    val solutions = solutionFile.readText().getSolutionsInTaskWindows()
+    val solutions = solutionFile.readText().uncommentTags().getSolutionsInTaskWindows()
     val taskFile = taskDir.subFile(TASK_KT)
 
-    val code = taskFile.readText()
+    val code = taskFile.readText().uncommentTags()
     val textRanges = code.getTaskWindowsFromText()
     val placeholders: List<Placeholder> = textRanges.zip(solutions).map {
         val (range, solution) = it
@@ -37,7 +37,9 @@ private fun readTask(taskDir: File, filesMap: FilesMap, commonLessonFiles: List<
         val lineNumber = range.line //+ 2 // 2 lines for import directive
         Placeholder(lineNumber, range.start, range.length, "", solution)
     }
-    fun newTaskFile(placeholders: List<Placeholder>, name: String) = TaskFile(placeholders, name.transformName(Mode.EDUCATIONAL_PLUGIN))
+    fun newTaskFile(placeholders: List<Placeholder>, name: String) =
+            TaskFile(placeholders, name.transformName(Mode.EDUCATIONAL_PLUGIN))
+
     val mainTaskFile = newTaskFile(placeholders, taskFile.name)
     filesMap.record(mainTaskFile, taskFile)
 
