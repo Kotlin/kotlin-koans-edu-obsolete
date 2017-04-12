@@ -1,5 +1,9 @@
 package koans.converter
 
+import koans.converter.Settings.COURSE_AUTHORS
+import koans.converter.Settings.COURSE_DESCRIPTION
+import koans.converter.Settings.COURSE_LANGUAGE
+import koans.converter.Settings.COURSE_NAME
 import java.io.File
 
 fun readCourse(koansDir: File, filesMap: FilesMap): Course {
@@ -21,7 +25,8 @@ fun readCourse(koansDir: File, filesMap: FilesMap): Course {
     val courseStructure = structureReader.readCourseStructure(koansDir.structureFile())
 
     val sortedLessons = lessons.sortAccordingToStructure(courseStructure.folders, Lesson::title)
-    return Course(sortedLessons, COURSE_DESCRIPTION, COURSE_NAME, COURSE_AUTHORS, COURSE_LANGUAGE).apply { filesMap.record(this, koansDir) }
+    return Course(sortedLessons, COURSE_DESCRIPTION, COURSE_NAME, COURSE_AUTHORS, COURSE_LANGUAGE)
+            .apply { filesMap.record(this, koansDir) }
 }
 
 private fun readTask(taskDir: File, filesMap: FilesMap, commonLessonFiles: List<File>): Task {

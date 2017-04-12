@@ -3,10 +3,10 @@ package koans.converter
 import java.io.File
 import java.util.*
 
-fun convertForWebDemo(parentDir: File, koansDir: File, links: Properties) {
+fun convertForWebDemo(sourceDir: File, targetDir: File, links: Properties) {
 
     val linksMap = links.stringPropertyNames().associate { Pair("]($it)", "](${links.getProperty(it)})") }
-    copyFolderAndTransformFiles(koansDir, parentDir) {
+    copyFolderAndTransformFiles(sourceDir, targetDir) {
         fileName, fileText ->
         when (fileName) {
             "koansTestUtil.kt" -> fileText.transformUtilFile(Mode.WEB_DEMO)
