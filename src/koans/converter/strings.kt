@@ -13,12 +13,17 @@ val COURSE_AUTHORS = emptyList<String>()
 
 // old
 val MANIFEST_JSON = "manifest.json"
-val TASK_KT = "Task.kt_"
+val TASK_KT_TXT = "Task.kt.txt"
 val TASK_MD = "task.md"
 val TASK_EE_MD = "task-ee.md"
 val SOLUTION_KT = "Solution.kt"
 val TEST_KT = "Test.kt"
-val CODE_FILE_EXTENSIONS = setOf(".kt", ".java", ".kt_", ".java_")
+
+val KT_EXT = ".kt"
+val JAVA_EXT = ".java"
+val KT_TXT = ".kt.txt"
+val JAVA_TXT = ".java.txt"
+val CODE_FILE_EXTENSIONS = setOf(KT_EXT, JAVA_EXT, KT_TXT, JAVA_TXT)
 val UTIL_FILE = "koansTestUtil.kt"
 
 // new

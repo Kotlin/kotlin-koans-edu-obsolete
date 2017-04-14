@@ -27,7 +27,7 @@ fun readCourse(koansDir: File, filesMap: FilesMap): Course {
 private fun readTask(taskDir: File, filesMap: FilesMap, commonLessonFiles: List<File>): Task {
     val solutionFile = taskDir.subFile(SOLUTION_KT)
     val solutions = solutionFile.readText().uncommentTags().getSolutionsInTaskWindows()
-    val taskFile = taskDir.subFile(TASK_KT)
+    val taskFile = taskDir.subFile(TASK_KT_TXT)
 
     val code = taskFile.readText().uncommentTags()
     val textRanges = code.getTaskWindowsFromText()
@@ -44,7 +44,7 @@ private fun readTask(taskDir: File, filesMap: FilesMap, commonLessonFiles: List<
     filesMap.record(mainTaskFile, taskFile)
 
     fun String.isOtherSourceFile(): Boolean {
-        return isSourceCodeFileName() && (this !in setOf(SOLUTION_KT, TASK_KT, TEST_KT))
+        return isSourceCodeFileName() && (this !in setOf(SOLUTION_KT, TASK_KT_TXT, TEST_KT))
     }
     val otherTaskFiles = taskDir.filterSubDirectories { it.name.isOtherSourceFile() }.mapAndRecord(filesMap) {
         taskFile ->

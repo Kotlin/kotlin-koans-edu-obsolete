@@ -15,7 +15,7 @@ fun main(args: Array<String>) {
     writeJson(course, convertedKoansDir.subFile(COURSE_JSON))
 
     val links = Properties()
-    FileInputStream(File("$KOANS_DIR/$LINKS_PROPERTIES")).use { links.load(it) }
+    FileInputStream(File("$KOANS_DIR/$LINKS_PROPERTIES")).also { links.load(it) }
 
     convertTasks(convertedKoansDir, course, filesMap, links)
 

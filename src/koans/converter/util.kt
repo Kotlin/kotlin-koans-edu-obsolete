@@ -26,8 +26,8 @@ fun String.transformUtilFile(mode: Mode) = replace("Mode.UNDEFINED", "Mode." + m
 fun String.transformName(mode: Mode) = transformExtension().removeModeSuffix(mode)
 
 private fun String.transformExtension() = when {
-    endsWith(".kt_") -> replace(".kt_", ".kt")
-    endsWith(".java_") -> replace(".java_", ".java")
+    endsWith(KT_TXT) -> replace(KT_TXT, KT_EXT)
+    endsWith(JAVA_TXT) -> replace(JAVA_TXT, JAVA_EXT)
     else -> this
 }
 
