@@ -25,11 +25,13 @@ object Settings {
 
     val CONVERT_WB by booleanProperties
     val CONVERT_EE by booleanProperties
+    val CONVERT_CG by booleanProperties
     val PACK_ZIP by booleanProperties
 
     val SOURCE_DIR by properties
     val CONVERTED_DIR_EE by properties
     val CONVERTED_DIR_WB by properties
+    val CONVERTED_DIR_CG by properties
     val ZIP_FILE_NAME by properties
 
     val LINKS_ENABLED by booleanProperties

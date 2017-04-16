@@ -19,7 +19,7 @@ fun String.addPackageNameAndImportForTests(fileName: String, packageName: String
 
 fun String.isSourceCodeFileName() = CODE_FILE_EXTENSIONS.any { this.endsWith(it) } && !contains("-wb")
 
-enum class Mode { WEB_DEMO, EDUCATIONAL_PLUGIN }
+enum class Mode { WEB_DEMO, EDUCATIONAL_PLUGIN, CODINGAME }
 
 fun String.transformUtilFile(mode: Mode) = replace("Mode.UNDEFINED", "Mode." + mode.name)
 
@@ -32,7 +32,11 @@ private fun String.transformExtension() = when {
 }
 
 private fun String.removeModeSuffix(mode: Mode): String {
-    val suffix = if (mode == Mode.WEB_DEMO) "-wb" else "-ee"
+    val suffix = when (mode) {
+        Mode.WEB_DEMO -> "-wb"
+        Mode.EDUCATIONAL_PLUGIN -> "-ee"
+        Mode.CODINGAME -> "-cg"
+    }
     return if (contains(suffix)) replace(suffix, "") else this
 }
 
