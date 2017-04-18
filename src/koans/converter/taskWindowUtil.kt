@@ -37,3 +37,7 @@ fun String.removeTaskWindowTagsWithWhitespaces() = replace(EMPTY_TASK_WINDOW, ""
 fun String.getSolutionsInTaskWindows(): List<String> {
     return split(OPEN).filter { it.contains(CLOSED) }.map { it.substringBefore(CLOSED) }
 }
+
+fun String.removeSolutions(): String {
+    return split(CLOSED).map { it.substringBefore(OPEN) }.joinToString(OPEN + "TODO()" + CLOSED)
+}

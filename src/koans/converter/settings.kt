@@ -46,6 +46,7 @@ val LINKS_PROPERTIES = "links.properties"
 // old
 val MANIFEST_JSON = "manifest.json"
 val TASK_KT_TXT = "Task.kt.txt"
+val TASK_KT = "Task.kt"
 val TASK_MD = "task.md"
 val TASK_EE_MD = "task-ee.md"
 val SOLUTION_KT = "Solution.kt"
