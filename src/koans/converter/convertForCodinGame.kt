@@ -92,7 +92,7 @@ fun convertForCodinGame(outputFolder: File, koansDir: File, links: Properties) {
 
                 // @[Return Hello World!]({"project": "name", "stubs": ["src/main/kotlin/Hello.kt"], "command": "hello.tests.HelloTest#testAssert"})
                 val transformedText = sourceText.replaceLinks(linksMap) + "\n\n" +
-                        """@[Task]({"project": "kotlin-koans-$lessonIndex-$taskIndex", "stubs": ["${taskProjectSrcFolder.relativeTo(taskOutputFolder)}/Task.kt"], "command": "$testClassName"})"""
+                        """@[Task]({"project": "kotlin-koans", "stubs": ["${taskProjectSrcFolder.relativeTo(outputFolder)}/Task.kt"], "command": "\"${taskOutputFolder.relativeTo(outputFolder)}\" $testClassName"})"""
 
                 taskOutputFolder.subFile("task.md").writeText(transformedText)
                 val relativeFolder = taskOutputFolder.relativeTo(outputFolder)
@@ -110,14 +110,9 @@ fun convertForCodinGame(outputFolder: File, koansDir: File, links: Properties) {
         }
 
         yml.println("projects:")
-        projects.forEach {
-            yml.println("  ${it.first}:")
-            yml.println("    root: ${it.second}")
-            yml.println("    runner:")
-            yml.println("      language: kotlin")
-            yml.println("      name: codingame/maven3-runner")
-            yml.println("      version: 1.0.0-openjdk-8")
-        }
+        yml.println("  kotlin-koans:")
+        yml.println("    root: /")
+        yml.println("    runner: techio/kotlin-maven3-junit4-runner:latest")
     }
 
 // Don't generate root pom.xml
@@ -128,6 +123,5 @@ fun convertForCodinGame(outputFolder: File, koansDir: File, links: Properties) {
     outputFolder.subFile("pom.xml").writeText(mavenText)
 */
 
-    koansDir.canonicalFile.parentFile.subFile("files/codingame/prebuild.sh").copyTo(outputFolder.subFile("prebuild.sh"))
     println("Done")
 }
