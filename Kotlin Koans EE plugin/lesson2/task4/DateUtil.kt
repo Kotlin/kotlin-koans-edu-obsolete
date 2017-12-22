@@ -1,13 +1,5 @@
 import java.util.Calendar
 
-fun MyDate.nextDay() = addTimeIntervals(TimeInterval.DAY, 1)
-
-enum class TimeInterval {
-    DAY,
-    WEEK,
-    YEAR
-}
-
 fun MyDate.addTimeIntervals(timeInterval: TimeInterval, number: Int): MyDate {
     val c = Calendar.getInstance()
     c.set(year, month, dayOfMonth)
