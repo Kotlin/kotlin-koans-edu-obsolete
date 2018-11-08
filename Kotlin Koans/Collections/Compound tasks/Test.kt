@@ -10,7 +10,7 @@ class K_Compound_Tasks {
     @Test fun testMostExpensiveDeliveredProduct() {
         val testShop = shop("test shop for 'most expensive delivered product'",
                 customer(lucas, Canberra,
-                        order(isDelivered = false, products = idea),
+                        order(isDelivered = false, products = *arrayOf(idea)),
                         order(reSharper)
                 )
         )
