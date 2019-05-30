@@ -8,7 +8,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <jackson.version>2.8.11.1</jackson.version>
+        <jackson.version>2.9.9</jackson.version>
         <parboiled.version>1.1.7</parboiled.version>
         <json.version>2.5</json.version>
         <pegdown.version>1.6.0</pegdown.version>
