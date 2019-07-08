@@ -1,4 +1,6 @@
-[![official JetBrains project](http://jb.gg/badges/official-plastic.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
+[![obsolete JetBrains project](https://jb.gg/badges/obsolete-plastic.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
+
+### This project is obsolete. The last version of Kotlin Koans is stored at https://github.com/Kotlin/kotlin-koans.
 
 # kotlin-koans-edu
 
